@@ -7,6 +7,11 @@ formations_database = {}
 team_name = ''
 squad = {}
 
+money = 0
+league_ranking = 1
+matchday = 1
+
+
 def initilisation():
 
     def setup_player_database():
@@ -100,7 +105,41 @@ def game_setup():
     game_setup_firstpage()
     set_squad()
 
+def main_menu():
+
+    options = {
+        '1':'Squad',
+        '2':'Tactics',
+        '3':'League',
+        '4':'Fixtures',
+        '5':'Transfers',
+        '6':'Finances',
+        '7':'Training',
+        '8':'Matchday'
+    }
+
+    print('MAIN MENU')
+    print(f"{team_name}")
+    print(f"Finances: {money}")
+    print(f"League Position: {league_ranking}")
+    print(f"Matchday {matchday}")
+    print('')
+    while True:
+        try:
+            print(f"{'Press:':8}{'Command:':25}")
+            print('------------------------------------')
+            for key,value in options.items():
+                print(f"{key:<8}{value}")
+            print('')
+            command = input('Choose a command: ')
+            print('')
+            if int(command) > 0 and int(command) < 9:
+                return int(command)
+        except:
+                pass
 
 #main code starts here?
 initilisation()
 game_setup()
+while True:
+    command = main_menu()
