@@ -1,6 +1,8 @@
 import csv
+
 player_database = {}
 epl_team_database = {}
+formations_database = {}
 
 def initilisation():
 
@@ -40,11 +42,20 @@ def initilisation():
             avg = sum(value) / len(value)
             epl_team_database[key] = round(avg, 1)
 
+    def setup_formations_database():
+        global formations_database
+        with open('formations.csv', mode='r', newline='') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                positions = row[1].split('/')
+                formations_database[row[0]] = positions
+
     setup_player_database()
     setup_epl_team_database()
+    setup_formations_database()
+
 
 
 
 #main code starts here?
 initilisation()
-print(epl_team_database)
