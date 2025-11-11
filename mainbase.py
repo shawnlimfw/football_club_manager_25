@@ -1,8 +1,10 @@
 import csv
+import random
 
 player_database = {}
 epl_team_database = {}
 formations_database = {}
+fixtures_database = {}
 
 team_name = ''
 squad = {}
@@ -58,9 +60,95 @@ def initilisation():
                 positions = row[1].split('/')
                 formations_database[row[0]] = positions
 
+    def setup_fixtures_database():
+        global fixtures_database
+        teams = list(range(1,21))
+        team_based_fixtures = {team:[] for team in teams}
+
+        temp_teams = teams[:]
+        while True:
+            team_based_fixtures[temp_teams[0]].append(temp_teams[1])
+            if len(team_based_fixtures[temp_teams[0]]) == 19:
+                break
+            shifted = temp_teams[1]
+            for i in range(1, 20):
+                if i == 19:
+                    temp_teams[i] = shifted
+                    break
+                temp_teams[i] = temp_teams[i+1]
+
+        for i in range(1,20):
+            focus_team = teams[i]
+            temp_teams = teams[:]
+            while True:
+                if temp_teams.index(focus_team) == 1:
+                    team_based_fixtures[focus_team].append(temp_teams[0])
+                else:
+                    team_based_fixtures[focus_team].append(temp_teams[21 - temp_teams.index(focus_team)])
+                if len(team_based_fixtures[focus_team]) == 19:
+                    break
+                shifted = temp_teams[1]
+                for i in range(1, 20):
+                    if i == 19:
+                        temp_teams[i] = shifted
+                        break
+                    temp_teams[i] = temp_teams[i+1]
+
+        gameweeks = {i: [] for i in range(1,20)}
+
+        for key, value in team_based_fixtures.items():
+            for i in range(1,20):
+                add = True
+                for game in gameweeks[i]:
+                    if key in game:
+                        add = False
+                if add == True:
+                    gameweeks[i].append([key, value[i-1]])
+
+        fhalf_fixtures = [value for key, value in gameweeks.items()]
+        random.shuffle(fhalf_fixtures)
+        for gameweek in fhalf_fixtures:
+            random.shuffle(gameweek)
+
+        shalf_fixtures = [value for key, value in gameweeks.items()]
+        random.shuffle(shalf_fixtures)
+        for gameweek in shalf_fixtures:
+            random.shuffle(gameweek)
+
+        check = []
+        for gameweek in fhalf_fixtures:
+            for game in gameweek:
+                check.append(game)
+
+        secondhalf_fixtures = []
+        for gameweek in shalf_fixtures:
+            secondhalf_fixtures.append([])
+            for game in gameweek:
+                if game in check:
+                    secondhalf_fixtures[-1].append([game[1], game[0]])
+                else:
+                    secondhalf_fixtures[-1].append([game])
+
+        full_fixtures = fhalf_fixtures + secondhalf_fixtures
+
+        enumerated_teams = {}
+        for index, key in enumerate(epl_team_database, 1):
+            enumerated_teams[index] = key
+
+        for index, gameweek in enumerate(full_fixtures, 1):
+            fixtures_database[f"GW{index}"] = {}
+            for indexx, game in enumerate(gameweek,1):
+                fixtures_database[f"GW{index}"][f"G{indexx}"] = game
+
+        for gwkey, gwdict in fixtures_database.items():
+            for gkey, glist in gwdict.items():
+                for index, team in enumerate(glist, 0):
+                    glist[index] = enumerated_teams[team]
+
     setup_player_database()
     setup_epl_team_database()
     setup_formations_database()
+    setup_fixtures_database()
 
 def game_setup():
 
@@ -150,6 +238,51 @@ def squad_page():
             print('')
             return
 
+def fixtures_page():
+
+    def fixtures_main_page():
+        command = 'X'
+        while True:
+            if command == 'Z':
+                return
+            print('FIXTURES')
+            if command == 'X':
+                command = show_matchday_fixtures()
+            elif command == 'Y':
+                command = show_team_fixtures()
+
+    def show_matchday_fixtures():
+        print(f"Matchday {matchday}")
+        print(f"Press Y to view {team_name} fixtures")
+        print('--------------------------------------------------------------------')
+        for key, value in fixtures_database[f"GW{matchday}"].items():
+            print(f"{value[0]:>30} VS {value[1]:<30}")
+        print('')
+        while True:
+            temp_command = input('Press Z to go back to MAIN MENU: ')
+            if temp_command in ['X', 'Y', 'Z']:
+                print('')
+                return temp_command
+            
+    def show_team_fixtures():
+        print(f"{team_name}")  
+        print(f"Press X to view Matchday {matchday} fixtures")
+        print('--------------------------------------------------------------------')
+        for gwid, gwdict in fixtures_database.items():
+            for gid, glist in gwdict.items():
+                if team_name == glist[0]:
+                    print(f"Matchday {gwid[2:]}: {glist[1]} (H)")
+                if team_name == glist[1]:
+                    print(f"Matchday {gwid[2:]}: {glist[0]} (A)")
+        print('')
+        while True:
+            temp_command = input('Press Z to go back to MAIN MENU: ')
+            if temp_command in ['X', 'Y', 'Z']:
+                print('')
+                return temp_command
+            
+    fixtures_main_page()
+
 
 #main code starts here?
 initilisation()
@@ -158,3 +291,5 @@ while True:
     command = main_menu()
     if command == 1:
         squad_page()
+    if command == 4:
+        fixtures_page()
