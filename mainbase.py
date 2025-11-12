@@ -580,6 +580,9 @@ def transfers_page():
 
             elif command == 'Z':
                 return
+            
+            else:
+                command = 'X'
 
     def transfers_buy_page():
         while True:
@@ -672,13 +675,14 @@ def transfers_page():
                     if int(command) in placeholder:
                         print('')
                         transfers_confirm_sell_page(placeholder[int(command)])
-                        break
+                        return 'X'
                 except:
                     pass
 
     def transfers_confirm_sell_page(player):
         global squad
         global money
+        global income
         print('CONFIRM')
         print(f"Sell {player[1]} for $xx?")
         print('Press A to confirm')

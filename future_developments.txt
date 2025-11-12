@@ -8,3 +8,4 @@
         --> non-desired answer
 -use flowchart to determine necessary updates
         --> including sort squad by ovr
+-try to perfect lengths of '-----------'
