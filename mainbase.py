@@ -1,6 +1,7 @@
 import csv
 import random
 import time
+import math
 
 player_database = {}
 epl_team_database = {}
@@ -297,7 +298,7 @@ def main_menu():
 
     print('MAIN MENU')
     print(f"{team_name}")
-    print(f"Finances: {money}")
+    print(f"Club funds: ${money:,}")
     print(f"League Position: {league_ranking}")
     print(f"Matchday {matchday}")
     print('')
@@ -569,6 +570,14 @@ def fixtures_page():
 
 def transfers_page():
 
+    def decide_transfer_market_seasonal():
+        m = matchday
+        while True:
+            if m - 1 % 4 == 0:
+                return m
+            else:
+                m -= 1
+
     def transfers_main_page():
         command = 'X'
         while True:
@@ -592,12 +601,13 @@ def transfers_page():
             print('Viewing TRANSFER MARKET')
             print(f"{(seasonal + 4) - matchday} matchdays left to market refresh")
             print('Press Y to sell squad players')
+            print(f"Club funds: ${money:,}")
             print('Press the number on the left to buy player')
             print('')
-            print(f"{'Press':<8}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Team':<28}{'OVR':4}")
-            print('----------------------------------------------------------------------------------------------------------------------------')
+            print(f"{'Press':<8}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Team':<28}{'OVR':4}{'Value':12}")
+            print('----------------------------------------------------------------------------------------------------------------------------------------')
             for index, (key,value) in enumerate(transfer_market_seasonal[seasonal].items(), 1):
-                print(f"{index:<8}{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Team']:<28}{value['OVR']:<4}")
+                print(f"{index:<8}{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Team']:<28}{value['OVR']:<4}${int(value_calibrated(int(value['OVR']), int(value['Age']))):,}")
                 placeholder[index] = key
             print('')
             while True:
@@ -611,44 +621,46 @@ def transfers_page():
                         return 'Y'
                     if int(command) in placeholder:
                         print('')
-                        transfers_confirm_buy_page(placeholder[int(command)])
+                        transfers_confirm_buy_page(placeholder[int(command)], seasonal)
                         break
                 except:
                     pass
 
-    def transfers_confirm_buy_page(player):
+    def transfers_confirm_buy_page(player, seasonal):
         global squad
         global transfer_market_seasonal
         global money
         global expenditure
         print('CONFIRM')
-        print(f"Buy {player[1]} for $xx?")
-        print('Press A to confirm')
-        while True:
-            command = input('Press X to go back to TRANSFER MARKET: ')
-            if command == 'A':
-                print('')
-                squad[player] = player_database[player]
-                squad[player]['Team'] = team_name
-                for key, value in transfer_market_seasonal.items():
-                    if player in value:
-                        del value[player]
-                money -= 0
-                expenditure += 0
-                return
-            if command == 'X':
-                print('')
-                return
+        price = int(value_calibrated(int(transfer_market_seasonal[seasonal][player]['OVR']), int(transfer_market_seasonal[seasonal][player]['Age'])))
 
-
-    def decide_transfer_market_seasonal():
-        m = matchday
-        while True:
-            if m - 1 % 4 == 0:
-                return m
-            else:
-                m -= 1
-
+        if money >= price:
+            print(f"Buy {player[1]} for ${price:,}?")
+            print('Press A to confirm')
+            while True:
+                command = input('Press X to go back to TRANSFER MARKET: ')
+                if command == 'A':
+                    print('')
+                    squad[player] = player_database[player]
+                    squad[player]['Team'] = team_name
+                    for key, value in transfer_market_seasonal.items():
+                        if player in value:
+                            del value[player]
+                    money -= price
+                    expenditure += price
+                    return
+                if command == 'X':
+                    print('')
+                    return
+                
+        else:
+            print(f"Club doesn't have enough funds for {player[1]} (${price:,})")
+            while True:
+                command = input('Press X to go back to TRANSFER MARKET: ')
+                if command == 'X':
+                        print('')
+                        return
+    
     def transfers_sell_page():
         while True:
             placeholder = {}
@@ -657,10 +669,10 @@ def transfers_page():
             print('Press X to view TRANSFER MARKET')
             print('Press the number on the left to sell player')
             print('')
-            print(f"{'Press':<8}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Team':<28}{'OVR':4}")
+            print(f"{'Press':<8}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Team':<28}{'OVR':4}{'Value':10}")
             print('-----------------------------------------------------------------------------------------------------------------------------------------------------------')
             for index, (key,value) in enumerate(squad.items(), 1):
-                print(f"{index:<8}{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Team']:<28}{value['OVR']:<4}")
+                print(f"{index:<8}{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Team']:<28}{value['OVR']:<4}${int(value_calibrated(int(value['OVR']), int(value['Age']))):,}")
                 placeholder[index] = key
             print('')
             while True:
@@ -684,18 +696,30 @@ def transfers_page():
         global money
         global income
         print('CONFIRM')
-        print(f"Sell {player[1]} for $xx?")
+        price = int(value_calibrated(int(squad[player]['OVR']), int(squad[player]['Age'])))
+        print(f"Sell {player[1]} for ${price:,}")
         print('Press A to confirm')
         while True:
             command = input('Press X to go back to TRANSFER MARKET: ')
             if command == 'A':
                 del squad[player]
-                money += 0
-                income += 0
+                money += price
+                income += price
+                print('')
                 return
             if command == 'X':
                 print('')
                 return
+            
+    def value_calibrated(ovr, age):
+        A = 3.07
+        B = 0.1784
+        k = 0.0675
+        OVR_REF = 70.0
+        AGE_REF = 30.0
+
+        value = A * math.exp(B * (ovr - OVR_REF) + k * (AGE_REF - age))
+        return value * 1000000
         
     transfers_main_page()
 
