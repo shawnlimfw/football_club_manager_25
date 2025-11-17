@@ -1,1 +1,1 @@
-print('(W)' in 'Seattle Reign (W)')
+dict(sorted(squad.items(), key=lambda x:(-int(x[1]['OVR']), x[0][1])))

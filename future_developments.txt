@@ -1,9 +1,13 @@
 -*restrict going into debt
 -*show finances in transfers
 -*increase youngsters chance of improving in training
--add starting budgets
+-*add starting budgets
 -use flowchart to determine necessary updates
-        --> including sort squad by ovr
+        *--> training > squad
+        *--> transfers > squad
+        --> transfers > tactics
+        --> training > tactics
+        --> matchday --> tactics
 -increase budget after matchday
 -test everything:
         --> words

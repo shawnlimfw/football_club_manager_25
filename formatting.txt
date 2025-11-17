@@ -30,3 +30,7 @@ market refresh:
 [1, 5, 9, 13, 17, 21, 25, 29, 33, 37]
 
 transfer_market_seasonal = {1:{},5:{},9:{},13:{},17:{},21:{},25:{},29:{},33:{},37:{}}
+
+training_records = {1: False, 2: False, 3: True, 4: True}
+
+{'Man Utd': 208460000, 'Paris Saint-Germain': 202490000, 'Manchester City': 181420000, 'Real Madrid': 152050000}

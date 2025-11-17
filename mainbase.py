@@ -28,6 +28,14 @@ league_ranking = 1
 training_records = {num:True for num in range(1, 39)}
 matchday = 1
 
+#COMMON FUNCTIONS#----------------------------------------------------------------------------------------------------------------------
+def sort_squad():
+    global squad
+    squad = dict(sorted(squad.items(), key=lambda x:(-int(x[1]['OVR']), x[0][1])))
+
+def update_tactics():
+    pass
+#COMMON FUNCTIONS#----------------------------------------------------------------------------------------------------------------------
 
 def initilisation():
 
@@ -297,6 +305,7 @@ def game_setup():
     set_default_tactics()
     set_transfer_market()
     set_money()
+
 
 def main_menu():
 
@@ -663,6 +672,7 @@ def transfers_page():
                             del value[player]
                     money -= price
                     expenditure += price
+                    sort_squad()
                     return
                 if command == 'X':
                     print('')
@@ -766,7 +776,7 @@ def training_page():
             print(load, end="", flush=True)
             for dot in '........':
                 print(dot, end="", flush=True)
-                time.sleep(0.3)
+                time.sleep(0.000001)
             print('')
         print('')
 
@@ -786,6 +796,7 @@ def training_page():
         else:
             for player in success_train:
                 print(f"{player[1]:28} OVR +1")
+        sort_squad()
         print('')
 
         while True:
