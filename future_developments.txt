@@ -5,8 +5,8 @@
 -use flowchart to determine necessary updates
         *--> training > squad
         *--> transfers > squad
-        --> transfers > tactics
-        --> training > tactics
+        *--> transfers > tactics
+        *--> training > tactics
         --> matchday --> tactics
 -increase budget after matchday
 -test everything:

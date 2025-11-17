@@ -29,12 +29,35 @@ training_records = {num:True for num in range(1, 39)}
 matchday = 1
 
 #COMMON FUNCTIONS#----------------------------------------------------------------------------------------------------------------------
+
 def sort_squad():
     global squad
     squad = dict(sorted(squad.items(), key=lambda x:(-int(x[1]['OVR']), x[0][1])))
 
 def update_tactics():
-    pass
+    global tactics
+
+    # after transfers(selling), remove player from starting XI
+    for key, value in tactics.items():
+        if value != '':
+            if (value['Index'], value['Name']) not in squad:
+                tactics[key] = ''
+
+    # after training, update ovr
+    for key, value in tactics.items():
+        if value != '':
+            if value['OVR'] != squad[(value['Index'], value['Name'])]['OVR']:
+                value['OVR'] = squad[(value['Index'], value['Name'])]['OVR']
+
+    # after matchday, update P, G, A, suspended, injured
+    for key, value in tactics.items():
+        if value != '':
+            value['Played'] = squad[(value['Index'], value['Name'])]['Played']
+            value['Goals'] = squad[(value['Index'], value['Name'])]['Goals']
+            value['Assists'] = squad[(value['Index'], value['Name'])]['Assists']
+            value['Suspended'] = squad[(value['Index'], value['Name'])]['Suspended']
+            value['Injured'] = squad[(value['Index'], value['Name'])]['Injured']
+
 #COMMON FUNCTIONS#----------------------------------------------------------------------------------------------------------------------
 
 def initilisation():
@@ -730,6 +753,7 @@ def transfers_page():
                 del squad[player]
                 money += price
                 income += price
+                update_tactics()
                 print('')
                 return
             if command == 'X':
@@ -776,7 +800,7 @@ def training_page():
             print(load, end="", flush=True)
             for dot in '........':
                 print(dot, end="", flush=True)
-                time.sleep(0.000001)
+                time.sleep(0.3)
             print('')
         print('')
 
@@ -797,6 +821,7 @@ def training_page():
             for player in success_train:
                 print(f"{player[1]:28} OVR +1")
         sort_squad()
+        update_tactics()
         print('')
 
         while True:
@@ -806,8 +831,6 @@ def training_page():
                 return
             
     training_main_page()
-
-
 
 def finances_page():
     print('FINANCES')
@@ -820,6 +843,11 @@ def finances_page():
         if command == 'X':
             print('')
             return
+        
+def matchday_page():
+    #use update_tactics() after each matchday
+    #increase budget after matchday
+    pass
 
 #main code starts here
 initilisation()
