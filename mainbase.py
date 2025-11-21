@@ -28,6 +28,8 @@ league_ranking = 1
 training_records = {num:True for num in range(1, 39)}
 matchday = 1
 
+match_engine_weights = {}
+
 #COMMON FUNCTIONS#----------------------------------------------------------------------------------------------------------------------
 
 def sort_squad():
@@ -57,6 +59,14 @@ def update_tactics():
             value['Assists'] = squad[(value['Index'], value['Name'])]['Assists']
             value['Suspended'] = squad[(value['Index'], value['Name'])]['Suspended']
             value['Injured'] = squad[(value['Index'], value['Name'])]['Injured']
+
+def update_league_ranking():
+    global league_ranking
+    global league_table
+    league_table = dict(sorted(league_table.items(), key=lambda item: (-item[1]['W']*3 - item[1]['D'], -item[1]['F']+item[1]['A'], item[0])))
+    for index, key in enumerate(league_table, 1):
+        if key == team_name:
+            league_ranking = index
 
 #COMMON FUNCTIONS#----------------------------------------------------------------------------------------------------------------------
 
@@ -102,7 +112,7 @@ def initilisation():
                 else:
                     epl_team_database[value['Team']].append(int(value['OVR']))
         for key,value in epl_team_database.items():
-            avg = sum(value) / len(value)
+            avg = sum(value[:11]) / len(value[:11])
             epl_team_database[key] = [round(avg, 1), teams_budget_database[key]]
 
     def setup_formations_database():
@@ -209,12 +219,23 @@ def initilisation():
                 'A':0
             }
 
+    def setup_match_engine_weights():
+        global match_engine_weights
+        with open('sorted_weights.csv', mode='r', newline='', encoding="utf8") as file:
+            reader = csv.reader(file)
+            for row in reader:
+                match_engine_weights[int(row[0])] = []
+                for number in row[1:]:
+                    match_engine_weights[int(row[0])].append(number)
+
+
     setup_player_database()
     setup_teams_budget_database()
     setup_epl_team_database()
     setup_formations_database()
     setup_fixtures_database()
     setup_league_table()
+    setup_match_engine_weights()
 
 def game_setup():
 
@@ -255,14 +276,6 @@ def game_setup():
         for key, value in player_database.items():
             if value['Team'] == team_name:
                 squad[key] = value
-
-    def set_league_ranking():
-        global league_ranking
-        global league_table
-        league_table = dict(sorted(league_table.items(), key=lambda item: (-item[1]['W']*3 - item[1]['D'], -item[1]['F']+item[1]['A'], item[0])))
-        for index, key in enumerate(league_table, 1):
-            if key == team_name:
-                league_ranking = index
 
     def set_default_tactics():
         global tactics
@@ -324,7 +337,7 @@ def game_setup():
 
     game_setup_firstpage()
     set_squad()
-    set_league_ranking()
+    update_league_ranking()
     set_default_tactics()
     set_transfer_market()
     set_money()
@@ -846,8 +859,89 @@ def finances_page():
         
 def matchday_page():
     #use update_tactics() after each matchday
+    #use update_league_ranking() after each matchday
     #increase budget after matchday
-    pass
+
+    def matchday_main_page():
+        while True:
+            print(f"MATCHDAY {matchday}")
+            print('')
+            for key, value in fixtures_database[f"GW{matchday}"].items():
+                print(f"{value[0]:>30} VS {value[1]:<30}")
+            print('')
+
+            next_opponent = ''
+            for key, value in fixtures_database[f"GW{matchday}"].items():
+                for team in value:
+                    if team == team_name:
+                        if value[0] == team_name:
+                            next_opponent = value[1]
+                        else:
+                            next_opponent = value[0]
+            print(f"Press Y to proceed to game with {next_opponent}")
+            while True:
+                command = input('Press X to go back to MAIN MENU: ')
+                if command == 'X':
+                    print('')
+                    return
+                if command == 'Y':
+                    print('')
+                    matchday_check_eligibility_page()
+                    break
+
+    def matchday_check_eligibility_page():
+        eligible = True
+        for key, value in tactics.items():
+            if value == '':
+                eligible = False
+            else:
+                if value['Suspended'] == True:
+                    eligible = False
+                if value['Injured'] == True:
+                    eligible = False
+        if eligible == True:
+            matchday_game()
+        if eligible == False:
+            print('Lineup is incomplete or players are unavailable.')
+            print('Please edit lineup in TACTICS page.')
+            while True:
+                command = input('Press X to go back to MAIN MENU: ')
+                if command == 'X':
+                    print('')
+                    return
+
+    def matchday_game():
+
+        def simulate_other_games():
+            pass
+        
+        def calculate_opponent_rating():
+            pass
+
+        def calculate_self_rating():
+            pass
+
+        def simulate_scoreline():
+            pass
+
+        def stage_events():
+            pass
+
+        def game_output():
+            pass
+
+        def update_stats():
+            pass
+
+        simulate_other_games()
+        calculate_opponent_rating()
+        calculate_self_rating()
+        simulate_scoreline()
+        stage_events()
+        game_output()
+        update_stats()
+
+    matchday_main_page()
 
 #main code starts here
 initilisation()
@@ -868,3 +962,5 @@ while True:
         finances_page()
     if command == 7:
         training_page()
+    if command == 8:
+        matchday_page()

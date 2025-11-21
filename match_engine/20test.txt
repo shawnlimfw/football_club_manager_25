@@ -1,0 +1,20 @@
+Manchester City FIFA 20	Manchester City	Premier League	87	86	83	85	
+Liverpool FIFA 20	Liverpool	Premier League	87	83	85	85	
+Tottenham Hotspur FIFA 20	Tottenham Hotspur	Premier League	85	82	82	82	
+Manchester United FIFA 20	Manchester United	Premier League	83	81	81	81	
+Chelsea FIFA 20	Chelsea	Premier League	80	84	81	81	
+Arsenal FIFA 20	Arsenal	Premier League	84	82	78	80	
+Leicester City FIFA 20	Leicester City	Premier League	80	79	79	79	
+West Ham United FIFA 20	West Ham United	Premier League	82	78	73	78	
+Everton FIFA 20	Everton	Premier League	80	78	79	78	
+Wolverhampton Wanderers FIFA 20	Wolverhampton Wanderers	Premier League	79	79	78	78	
+Watford FIFA 20	Watford	Premier League	76	78	75	77	
+Newcastle United FIFA 20	Newcastle United	Premier League	75	78	77	77	
+Crystal Palace FIFA 20	Crystal Palace	Premier League	73	77	76	77	
+AFC Bournemouth FIFA 20	AFC Bournemouth	Premier League	78	76	76	76	
+Burnley FIFA 20	Burnley	Premier League	77	76	76	76	
+Aston Villa FIFA 20	Aston Villa	Premier League	77	75	75	76	
+Southampton FIFA 20	Southampton	Premier League	76	76	76	76	
+Brighton & Hove Albion FIFA 20	Brighton & Hove Albion	Premier League	75	76	76	76	
+Sheffield United FIFA 20	Sheffield United	Premier League	73	77	75	75	
+Norwich City FIFA 20	Norwich City	Premier League	75	74	72	74	

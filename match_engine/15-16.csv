@@ -1,0 +1,381 @@
+Round,Date,Team 1,FT,Team 2
+1,Sat Aug 8 2015,Manchester United,1-0,Tottenham Hotspur
+1,Sat Aug 8 2015,Bournemouth,0-1,Aston Villa
+1,Sat Aug 8 2015,Leicester City,4-2,Sunderland
+1,Sat Aug 8 2015,Norwich City,1-3,Crystal Palace
+1,Sat Aug 8 2015,Chelsea,2-2,Swansea City
+1,Sat Aug 8 2015,Everton,2-2,Watford
+1,Sun Aug 9 2015,Arsenal,0-2,West Ham United
+1,Sun Aug 9 2015,Newcastle United,2-2,Southampton
+1,Sun Aug 9 2015,Stoke City,0-1,Liverpool
+1,Mon Aug 10 2015,West Bromwich Albion,0-3,Manchester City
+2,Fri Aug 14 2015,Aston Villa,0-1,Manchester United
+2,Sat Aug 15 2015,West Ham United,1-2,Leicester City
+2,Sat Aug 15 2015,Southampton,0-3,Everton
+2,Sat Aug 15 2015,Sunderland,1-3,Norwich City
+2,Sat Aug 15 2015,Swansea City,2-0,Newcastle United
+2,Sat Aug 15 2015,Watford,0-0,West Bromwich Albion
+2,Sat Aug 15 2015,Tottenham Hotspur,2-2,Stoke City
+2,Sun Aug 16 2015,Crystal Palace,1-2,Arsenal
+2,Sun Aug 16 2015,Manchester City,3-0,Chelsea
+2,Mon Aug 17 2015,Liverpool,1-0,Bournemouth
+3,Sat Aug 22 2015,West Ham United,3-4,Bournemouth
+3,Sat Aug 22 2015,Manchester United,0-0,Newcastle United
+3,Sat Aug 22 2015,Sunderland,1-1,Swansea City
+3,Sat Aug 22 2015,Leicester City,1-1,Tottenham Hotspur
+3,Sat Aug 22 2015,Crystal Palace,2-1,Aston Villa
+3,Sat Aug 22 2015,Norwich City,1-1,Stoke City
+3,Sun Aug 23 2015,West Bromwich Albion,2-3,Chelsea
+3,Sun Aug 23 2015,Everton,0-2,Manchester City
+3,Sun Aug 23 2015,Watford,0-0,Southampton
+3,Mon Aug 24 2015,Arsenal,0-0,Liverpool
+4,Sat Aug 29 2015,Aston Villa,2-2,Sunderland
+4,Sat Aug 29 2015,Newcastle United,0-1,Arsenal
+4,Sat Aug 29 2015,Stoke City,0-1,West Bromwich Albion
+4,Sat Aug 29 2015,Bournemouth,1-1,Leicester City
+4,Sat Aug 29 2015,Liverpool,0-3,West Ham United
+4,Sat Aug 29 2015,Manchester City,2-0,Watford
+4,Sat Aug 29 2015,Chelsea,1-2,Crystal Palace
+4,Sat Aug 29 2015,Tottenham Hotspur,0-0,Everton
+4,Sun Aug 30 2015,Southampton,3-0,Norwich City
+4,Sun Aug 30 2015,Swansea City,2-1,Manchester United
+5,Sat Sep 12 2015,West Bromwich Albion,0-0,Southampton
+5,Sat Sep 12 2015,Arsenal,2-0,Stoke City
+5,Sat Sep 12 2015,Everton,3-1,Chelsea
+5,Sat Sep 12 2015,Manchester United,3-1,Liverpool
+5,Sat Sep 12 2015,Norwich City,3-1,Bournemouth
+5,Sat Sep 12 2015,Crystal Palace,0-1,Manchester City
+5,Sat Sep 12 2015,Watford,1-0,Swansea City
+5,Sun Sep 13 2015,Sunderland,0-1,Tottenham Hotspur
+5,Sun Sep 13 2015,Leicester City,3-2,Aston Villa
+5,Mon Sep 14 2015,West Ham United,2-0,Newcastle United
+6,Sat Sep 19 2015,Chelsea,2-0,Arsenal
+6,Sat Sep 19 2015,Swansea City,0-0,Everton
+6,Sat Sep 19 2015,Newcastle United,1-2,Watford
+6,Sat Sep 19 2015,Aston Villa,0-1,West Bromwich Albion
+6,Sat Sep 19 2015,Manchester City,1-2,West Ham United
+6,Sat Sep 19 2015,Bournemouth,2-0,Sunderland
+6,Sat Sep 19 2015,Stoke City,2-2,Leicester City
+6,Sun Sep 20 2015,Tottenham Hotspur,1-0,Crystal Palace
+6,Sun Sep 20 2015,Southampton,2-3,Manchester United
+6,Sun Sep 20 2015,Liverpool,1-1,Norwich City
+7,Sat Sep 26 2015,Tottenham Hotspur,4-1,Manchester City
+7,Sat Sep 26 2015,Liverpool,3-2,Aston Villa
+7,Sat Sep 26 2015,West Ham United,2-2,Norwich City
+7,Sat Sep 26 2015,Newcastle United,2-2,Chelsea
+7,Sat Sep 26 2015,Manchester United,3-0,Sunderland
+7,Sat Sep 26 2015,Leicester City,2-5,Arsenal
+7,Sat Sep 26 2015,Stoke City,2-1,Bournemouth
+7,Sat Sep 26 2015,Southampton,3-1,Swansea City
+7,Sun Sep 27 2015,Watford,0-1,Crystal Palace
+7,Mon Sep 28 2015,West Bromwich Albion,2-3,Everton
+8,Sat Oct 3 2015,Aston Villa,0-1,Stoke City
+8,Sat Oct 3 2015,Bournemouth,1-1,Watford
+8,Sat Oct 3 2015,Crystal Palace,2-0,West Bromwich Albion
+8,Sat Oct 3 2015,Norwich City,1-2,Leicester City
+8,Sat Oct 3 2015,Chelsea,1-3,Southampton
+8,Sat Oct 3 2015,Sunderland,2-2,West Ham United
+8,Sat Oct 3 2015,Manchester City,6-1,Newcastle United
+8,Sun Oct 4 2015,Everton,1-1,Liverpool
+8,Sun Oct 4 2015,Arsenal,3-0,Manchester United
+8,Sun Oct 4 2015,Swansea City,2-2,Tottenham Hotspur
+9,Sat Oct 17 2015,Crystal Palace,1-3,West Ham United
+9,Sat Oct 17 2015,Manchester City,5-1,Bournemouth
+9,Sat Oct 17 2015,Tottenham Hotspur,0-0,Liverpool
+9,Sat Oct 17 2015,Everton,0-3,Manchester United
+9,Sat Oct 17 2015,Southampton,2-2,Leicester City
+9,Sat Oct 17 2015,Chelsea,2-0,Aston Villa
+9,Sat Oct 17 2015,West Bromwich Albion,1-0,Sunderland
+9,Sat Oct 17 2015,Watford,0-3,Arsenal
+9,Sun Oct 18 2015,Newcastle United,6-2,Norwich City
+9,Mon Oct 19 2015,Swansea City,0-1,Stoke City
+10,Sat Oct 24 2015,Aston Villa,1-2,Swansea City
+10,Sat Oct 24 2015,Leicester City,1-0,Crystal Palace
+10,Sat Oct 24 2015,Stoke City,0-2,Watford
+10,Sat Oct 24 2015,Norwich City,0-1,West Bromwich Albion
+10,Sat Oct 24 2015,Arsenal,2-1,Everton
+10,Sat Oct 24 2015,West Ham United,2-1,Chelsea
+10,Sun Oct 25 2015,Sunderland,3-0,Newcastle United
+10,Sun Oct 25 2015,Bournemouth,1-5,Tottenham Hotspur
+10,Sun Oct 25 2015,Liverpool,1-1,Southampton
+10,Sun Oct 25 2015,Manchester United,0-0,Manchester City
+11,Sat Oct 31 2015,Chelsea,1-3,Liverpool
+11,Sat Oct 31 2015,Newcastle United,0-0,Stoke City
+11,Sat Oct 31 2015,Crystal Palace,0-0,Manchester United
+11,Sat Oct 31 2015,Manchester City,2-1,Norwich City
+11,Sat Oct 31 2015,Swansea City,0-3,Arsenal
+11,Sat Oct 31 2015,West Bromwich Albion,2-3,Leicester City
+11,Sat Oct 31 2015,Watford,2-0,West Ham United
+11,Sun Nov 1 2015,Everton,6-2,Sunderland
+11,Sun Nov 1 2015,Southampton,2-0,Bournemouth
+11,Mon Nov 2 2015,Tottenham Hotspur,3-1,Aston Villa
+12,Sat Nov 7 2015,West Ham United,1-1,Everton
+12,Sat Nov 7 2015,Leicester City,2-1,Watford
+12,Sat Nov 7 2015,Bournemouth,0-1,Newcastle United
+12,Sat Nov 7 2015,Stoke City,1-0,Chelsea
+12,Sat Nov 7 2015,Norwich City,1-0,Swansea City
+12,Sat Nov 7 2015,Sunderland,0-1,Southampton
+12,Sat Nov 7 2015,Manchester United,2-0,West Bromwich Albion
+12,Sun Nov 8 2015,Aston Villa,0-0,Manchester City
+12,Sun Nov 8 2015,Arsenal,1-1,Tottenham Hotspur
+12,Sun Nov 8 2015,Liverpool,1-2,Crystal Palace
+13,Sat Nov 21 2015,West Bromwich Albion,2-1,Arsenal
+13,Sat Nov 21 2015,Everton,4-0,Aston Villa
+13,Sat Nov 21 2015,Watford,1-2,Manchester United
+13,Sat Nov 21 2015,Chelsea,1-0,Norwich City
+13,Sat Nov 21 2015,Manchester City,1-4,Liverpool
+13,Sat Nov 21 2015,Southampton,0-1,Stoke City
+13,Sat Nov 21 2015,Swansea City,2-2,Bournemouth
+13,Sat Nov 21 2015,Newcastle United,0-3,Leicester City
+13,Sun Nov 22 2015,Tottenham Hotspur,4-1,West Ham United
+13,Mon Nov 23 2015,Crystal Palace,0-1,Sunderland
+14,Sat Nov 28 2015,Manchester City,3-1,Southampton
+14,Sat Nov 28 2015,Crystal Palace,5-1,Newcastle United
+14,Sat Nov 28 2015,Aston Villa,2-3,Watford
+14,Sat Nov 28 2015,Leicester City,1-1,Manchester United
+14,Sat Nov 28 2015,Bournemouth,3-3,Everton
+14,Sat Nov 28 2015,Sunderland,2-0,Stoke City
+14,Sun Nov 29 2015,Tottenham Hotspur,0-0,Chelsea
+14,Sun Nov 29 2015,West Ham United,1-1,West Bromwich Albion
+14,Sun Nov 29 2015,Norwich City,1-1,Arsenal
+14,Sun Nov 29 2015,Liverpool,1-0,Swansea City
+15,Sat Dec 5 2015,Stoke City,2-0,Manchester City
+15,Sat Dec 5 2015,Arsenal,3-1,Sunderland
+15,Sat Dec 5 2015,Watford,2-0,Norwich City
+15,Sat Dec 5 2015,Manchester United,0-0,West Ham United
+15,Sat Dec 5 2015,Swansea City,0-3,Leicester City
+15,Sat Dec 5 2015,West Bromwich Albion,1-1,Tottenham Hotspur
+15,Sat Dec 5 2015,Southampton,1-1,Aston Villa
+15,Sat Dec 5 2015,Chelsea,0-1,Bournemouth
+15,Sun Dec 6 2015,Newcastle United,2-0,Liverpool
+15,Mon Dec 7 2015,Everton,1-1,Crystal Palace
+16,Sat Dec 12 2015,Norwich City,1-1,Everton
+16,Sat Dec 12 2015,Crystal Palace,1-0,Southampton
+16,Sat Dec 12 2015,Manchester City,2-1,Swansea City
+16,Sat Dec 12 2015,Bournemouth,2-1,Manchester United
+16,Sat Dec 12 2015,West Ham United,0-0,Stoke City
+16,Sat Dec 12 2015,Sunderland,0-1,Watford
+16,Sun Dec 13 2015,Aston Villa,0-2,Arsenal
+16,Sun Dec 13 2015,Tottenham Hotspur,1-2,Newcastle United
+16,Sun Dec 13 2015,Liverpool,2-2,West Bromwich Albion
+16,Mon Dec 14 2015,Leicester City,2-1,Chelsea
+17,Sat Dec 19 2015,Southampton,0-2,Tottenham Hotspur
+17,Sat Dec 19 2015,Everton,2-3,Leicester City
+17,Sat Dec 19 2015,Stoke City,1-2,Crystal Palace
+17,Sat Dec 19 2015,West Bromwich Albion,1-2,Bournemouth
+17,Sat Dec 19 2015,Newcastle United,1-1,Aston Villa
+17,Sat Dec 19 2015,Manchester United,1-2,Norwich City
+17,Sat Dec 19 2015,Chelsea,3-1,Sunderland
+17,Sun Dec 20 2015,Watford,3-0,Liverpool
+17,Sun Dec 20 2015,Swansea City,0-0,West Ham United
+17,Mon Dec 21 2015,Arsenal,2-1,Manchester City
+18,Sat Dec 26 2015,Southampton,4-0,Arsenal
+18,Sat Dec 26 2015,Swansea City,1-0,West Bromwich Albion
+18,Sat Dec 26 2015,Bournemouth,0-0,Crystal Palace
+18,Sat Dec 26 2015,Stoke City,2-0,Manchester United
+18,Sat Dec 26 2015,Aston Villa,1-1,West Ham United
+18,Sat Dec 26 2015,Chelsea,2-2,Watford
+18,Sat Dec 26 2015,Tottenham Hotspur,3-0,Norwich City
+18,Sat Dec 26 2015,Liverpool,1-0,Leicester City
+18,Sat Dec 26 2015,Newcastle United,0-1,Everton
+18,Sat Dec 26 2015,Manchester City,4-1,Sunderland
+19,Mon Dec 28 2015,Crystal Palace,0-0,Swansea City
+19,Mon Dec 28 2015,Norwich City,2-0,Aston Villa
+19,Mon Dec 28 2015,West Bromwich Albion,1-0,Newcastle United
+19,Mon Dec 28 2015,Everton,3-4,Stoke City
+19,Mon Dec 28 2015,Watford,1-2,Tottenham Hotspur
+19,Mon Dec 28 2015,West Ham United,2-1,Southampton
+19,Mon Dec 28 2015,Manchester United,0-0,Chelsea
+19,Mon Dec 28 2015,Arsenal,2-0,Bournemouth
+19,Tue Dec 29 2015,Leicester City,0-0,Manchester City
+19,Wed Dec 30 2015,Sunderland,0-1,Liverpool
+20,Sat Jan 2 2016,Sunderland,3-1,Aston Villa
+20,Sat Jan 2 2016,West Bromwich Albion,2-1,Stoke City
+20,Sat Jan 2 2016,Manchester United,2-1,Swansea City
+20,Sat Jan 2 2016,Watford,1-2,Manchester City
+20,Sat Jan 2 2016,Leicester City,0-0,Bournemouth
+20,Sat Jan 2 2016,Norwich City,1-0,Southampton
+20,Sat Jan 2 2016,Arsenal,1-0,Newcastle United
+20,Sat Jan 2 2016,West Ham United,2-0,Liverpool
+20,Sun Jan 3 2016,Crystal Palace,0-3,Chelsea
+20,Sun Jan 3 2016,Everton,1-1,Tottenham Hotspur
+21,Tue Jan 12 2016,Newcastle United,3-3,Manchester United
+21,Tue Jan 12 2016,Aston Villa,1-0,Crystal Palace
+21,Tue Jan 12 2016,Bournemouth,1-3,West Ham United
+21,Wed Jan 13 2016,Stoke City,3-1,Norwich City
+21,Wed Jan 13 2016,Southampton,2-0,Watford
+21,Wed Jan 13 2016,Chelsea,2-2,West Bromwich Albion
+21,Wed Jan 13 2016,Swansea City,2-4,Sunderland
+21,Wed Jan 13 2016,Liverpool,3-3,Arsenal
+21,Wed Jan 13 2016,Tottenham Hotspur,0-1,Leicester City
+21,Wed Jan 13 2016,Manchester City,0-0,Everton
+22,Sat Jan 16 2016,Tottenham Hotspur,4-1,Sunderland
+22,Sat Jan 16 2016,Southampton,3-0,West Bromwich Albion
+22,Sat Jan 16 2016,Aston Villa,1-1,Leicester City
+22,Sat Jan 16 2016,Bournemouth,3-0,Norwich City
+22,Sat Jan 16 2016,Chelsea,3-3,Everton
+22,Sat Jan 16 2016,Newcastle United,2-1,West Ham United
+22,Sat Jan 16 2016,Manchester City,4-0,Crystal Palace
+22,Sun Jan 17 2016,Liverpool,0-1,Manchester United
+22,Sun Jan 17 2016,Stoke City,0-0,Arsenal
+22,Mon Jan 18 2016,Swansea City,1-0,Watford
+23,Sat Jan 23 2016,West Ham United,2-2,Manchester City
+23,Sat Jan 23 2016,Manchester United,0-1,Southampton
+23,Sat Jan 23 2016,Norwich City,4-5,Liverpool
+23,Sat Jan 23 2016,Watford,2-1,Newcastle United
+23,Sat Jan 23 2016,Leicester City,3-0,Stoke City
+23,Sat Jan 23 2016,Sunderland,1-1,Bournemouth
+23,Sat Jan 23 2016,Crystal Palace,1-3,Tottenham Hotspur
+23,Sat Jan 23 2016,West Bromwich Albion,0-0,Aston Villa
+23,Sun Jan 24 2016,Everton,1-2,Swansea City
+23,Sun Jan 24 2016,Arsenal,0-1,Chelsea
+24,Tue Feb 2 2016,Arsenal,0-0,Southampton
+24,Tue Feb 2 2016,West Ham United,2-0,Aston Villa
+24,Tue Feb 2 2016,Norwich City,0-3,Tottenham Hotspur
+24,Tue Feb 2 2016,Sunderland,0-1,Manchester City
+24,Tue Feb 2 2016,Leicester City,2-0,Liverpool
+24,Tue Feb 2 2016,Crystal Palace,1-2,Bournemouth
+24,Tue Feb 2 2016,West Bromwich Albion,1-1,Swansea City
+24,Tue Feb 2 2016,Manchester United,3-0,Stoke City
+24,Wed Feb 3 2016,Everton,3-0,Newcastle United
+24,Wed Feb 3 2016,Watford,0-0,Chelsea
+25,Sat Feb 6 2016,Swansea City,1-1,Crystal Palace
+25,Sat Feb 6 2016,Newcastle United,1-0,West Bromwich Albion
+25,Sat Feb 6 2016,Manchester City,1-3,Leicester City
+25,Sat Feb 6 2016,Liverpool,2-2,Sunderland
+25,Sat Feb 6 2016,Southampton,1-0,West Ham United
+25,Sat Feb 6 2016,Tottenham Hotspur,1-0,Watford
+25,Sat Feb 6 2016,Stoke City,0-3,Everton
+25,Sat Feb 6 2016,Aston Villa,2-0,Norwich City
+25,Sun Feb 7 2016,Bournemouth,0-2,Arsenal
+25,Sun Feb 7 2016,Chelsea,1-1,Manchester United
+26,Sat Feb 13 2016,Norwich City,2-2,West Ham United
+26,Sat Feb 13 2016,Crystal Palace,1-2,Watford
+26,Sat Feb 13 2016,Sunderland,2-1,Manchester United
+26,Sat Feb 13 2016,Everton,0-1,West Bromwich Albion
+26,Sat Feb 13 2016,Bournemouth,1-3,Stoke City
+26,Sat Feb 13 2016,Swansea City,0-1,Southampton
+26,Sat Feb 13 2016,Chelsea,5-1,Newcastle United
+26,Sun Feb 14 2016,Arsenal,2-1,Leicester City
+26,Sun Feb 14 2016,Aston Villa,0-6,Liverpool
+26,Sun Feb 14 2016,Manchester City,1-2,Tottenham Hotspur
+27,Sat Feb 27 2016,Stoke City,2-1,Aston Villa
+27,Sat Feb 27 2016,West Bromwich Albion,3-2,Crystal Palace
+27,Sat Feb 27 2016,Watford,0-0,Bournemouth
+27,Sat Feb 27 2016,Southampton,1-2,Chelsea
+27,Sat Feb 27 2016,Leicester City,1-0,Norwich City
+27,Sat Feb 27 2016,West Ham United,1-0,Sunderland
+27,Sun Feb 28 2016,Manchester United,3-2,Arsenal
+27,Sun Feb 28 2016,Tottenham Hotspur,2-1,Swansea City
+28,Tue Mar 1 2016,Leicester City,2-2,West Bromwich Albion
+28,Tue Mar 1 2016,Aston Villa,1-3,Everton
+28,Tue Mar 1 2016,Sunderland,2-2,Crystal Palace
+28,Tue Mar 1 2016,Bournemouth,2-0,Southampton
+28,Tue Mar 1 2016,Norwich City,1-2,Chelsea
+28,Wed Mar 2 2016,Stoke City,1-0,Newcastle United
+28,Wed Mar 2 2016,Arsenal,1-2,Swansea City
+28,Wed Mar 2 2016,West Ham United,1-0,Tottenham Hotspur
+28,Wed Mar 2 2016,Manchester United,1-0,Watford
+28,Wed Mar 2 2016,Liverpool,3-0,Manchester City
+29,Sat Mar 5 2016,Newcastle United,1-3,Bournemouth
+29,Sat Mar 5 2016,Tottenham Hotspur,2-2,Arsenal
+29,Sat Mar 5 2016,Swansea City,1-0,Norwich City
+29,Sat Mar 5 2016,Watford,0-1,Leicester City
+29,Sat Mar 5 2016,Everton,2-3,West Ham United
+29,Sat Mar 5 2016,Manchester City,4-0,Aston Villa
+29,Sat Mar 5 2016,Chelsea,1-1,Stoke City
+29,Sat Mar 5 2016,Southampton,1-1,Sunderland
+29,Sun Mar 6 2016,Crystal Palace,1-2,Liverpool
+29,Sun Mar 6 2016,West Bromwich Albion,1-0,Manchester United
+30,Sat Mar 12 2016,Norwich City,0-0,Manchester City
+30,Sat Mar 12 2016,Stoke City,1-2,Southampton
+30,Sat Mar 12 2016,Bournemouth,3-2,Swansea City
+30,Sun Mar 13 2016,Aston Villa,0-2,Tottenham Hotspur
+30,Mon Mar 14 2016,Leicester City,1-0,Newcastle United
+31,Sat Mar 19 2016,Watford,1-2,Stoke City
+31,Sat Mar 19 2016,Everton,0-2,Arsenal
+31,Sat Mar 19 2016,Crystal Palace,0-1,Leicester City
+31,Sat Mar 19 2016,Swansea City,1-0,Aston Villa
+31,Sat Mar 19 2016,Chelsea,2-2,West Ham United
+31,Sat Mar 19 2016,West Bromwich Albion,0-1,Norwich City
+31,Sun Mar 20 2016,Newcastle United,1-1,Sunderland
+31,Sun Mar 20 2016,Manchester City,0-1,Manchester United
+31,Sun Mar 20 2016,Tottenham Hotspur,3-0,Bournemouth
+31,Sun Mar 20 2016,Southampton,3-2,Liverpool
+32,Sat Apr 2 2016,Aston Villa,0-4,Chelsea
+32,Sat Apr 2 2016,Bournemouth,0-4,Manchester City
+32,Sat Apr 2 2016,Liverpool,1-1,Tottenham Hotspur
+32,Sat Apr 2 2016,Stoke City,2-2,Swansea City
+32,Sat Apr 2 2016,Norwich City,3-2,Newcastle United
+32,Sat Apr 2 2016,West Ham United,2-2,Crystal Palace
+32,Sat Apr 2 2016,Sunderland,0-0,West Bromwich Albion
+32,Sat Apr 2 2016,Arsenal,4-0,Watford
+32,Sun Apr 3 2016,Leicester City,1-0,Southampton
+32,Sun Apr 3 2016,Manchester United,1-0,Everton
+33,Sat Apr 9 2016,Southampton,3-1,Newcastle United
+33,Sat Apr 9 2016,Manchester City,2-1,West Bromwich Albion
+33,Sat Apr 9 2016,West Ham United,3-3,Arsenal
+33,Sat Apr 9 2016,Aston Villa,1-2,Bournemouth
+33,Sat Apr 9 2016,Swansea City,1-0,Chelsea
+33,Sat Apr 9 2016,Crystal Palace,1-0,Norwich City
+33,Sat Apr 9 2016,Watford,1-1,Everton
+33,Sun Apr 10 2016,Sunderland,0-2,Leicester City
+33,Sun Apr 10 2016,Tottenham Hotspur,3-0,Manchester United
+33,Sun Apr 10 2016,Liverpool,4-1,Stoke City
+35,Wed Apr 13 2016,Crystal Palace,0-0,Everton
+34,Sat Apr 16 2016,Norwich City,0-3,Sunderland
+34,Sat Apr 16 2016,Manchester United,1-0,Aston Villa
+34,Sat Apr 16 2016,Newcastle United,3-0,Swansea City
+34,Sat Apr 16 2016,Everton,1-1,Southampton
+34,Sat Apr 16 2016,Chelsea,0-3,Manchester City
+34,Sat Apr 16 2016,West Bromwich Albion,0-1,Watford
+34,Sun Apr 17 2016,Leicester City,2-2,West Ham United
+34,Sun Apr 17 2016,Bournemouth,1-2,Liverpool
+34,Sun Apr 17 2016,Arsenal,1-1,Crystal Palace
+34,Mon Apr 18 2016,Stoke City,0-4,Tottenham Hotspur
+27,Tue Apr 19 2016,Newcastle United,1-1,Manchester City
+27,Wed Apr 20 2016,Liverpool,4-0,Everton
+30,Wed Apr 20 2016,Manchester United,2-0,Crystal Palace
+30,Wed Apr 20 2016,West Ham United,3-1,Watford
+30,Thu Apr 21 2016,Arsenal,2-0,West Bromwich Albion
+35,Sat Apr 23 2016,Manchester City,4-0,Stoke City
+35,Sat Apr 23 2016,Bournemouth,1-4,Chelsea
+35,Sat Apr 23 2016,Aston Villa,2-4,Southampton
+35,Sat Apr 23 2016,Liverpool,2-2,Newcastle United
+35,Sun Apr 24 2016,Sunderland,0-0,Arsenal
+35,Sun Apr 24 2016,Leicester City,4-0,Swansea City
+35,Mon Apr 25 2016,Tottenham Hotspur,1-1,West Bromwich Albion
+36,Sat Apr 30 2016,Stoke City,1-1,Sunderland
+36,Sat Apr 30 2016,Newcastle United,1-0,Crystal Palace
+36,Sat Apr 30 2016,Watford,3-2,Aston Villa
+36,Sat Apr 30 2016,Everton,2-1,Bournemouth
+36,Sat Apr 30 2016,Arsenal,1-0,Norwich City
+36,Sat Apr 30 2016,West Bromwich Albion,0-3,West Ham United
+36,Sun May 1 2016,Swansea City,3-1,Liverpool
+36,Sun May 1 2016,Manchester United,1-1,Leicester City
+36,Sun May 1 2016,Southampton,4-2,Manchester City
+36,Mon May 2 2016,Chelsea,2-2,Tottenham Hotspur
+37,Sat May 7 2016,Crystal Palace,2-1,Stoke City
+37,Sat May 7 2016,Norwich City,0-1,Manchester United
+37,Sat May 7 2016,Aston Villa,0-0,Newcastle United
+37,Sat May 7 2016,Leicester City,3-1,Everton
+37,Sat May 7 2016,Sunderland,3-2,Chelsea
+37,Sat May 7 2016,West Ham United,1-4,Swansea City
+37,Sat May 7 2016,Bournemouth,1-1,West Bromwich Albion
+37,Sun May 8 2016,Tottenham Hotspur,1-2,Southampton
+37,Sun May 8 2016,Liverpool,2-0,Watford
+37,Sun May 8 2016,Manchester City,2-2,Arsenal
+35,Tue May 10 2016,West Ham United,3-2,Manchester United
+30,Wed May 11 2016,Sunderland,3-0,Everton
+30,Wed May 11 2016,Liverpool,1-1,Chelsea
+35,Wed May 11 2016,Norwich City,4-2,Watford
+38,Sun May 15 2016,Arsenal,4-0,Aston Villa
+38,Sun May 15 2016,Stoke City,2-1,West Ham United
+38,Sun May 15 2016,Swansea City,1-1,Manchester City
+38,Sun May 15 2016,Southampton,4-1,Crystal Palace
+38,Sun May 15 2016,Newcastle United,5-1,Tottenham Hotspur
+38,Sun May 15 2016,West Bromwich Albion,1-1,Liverpool
+38,Sun May 15 2016,Watford,2-2,Sunderland
+38,Sun May 15 2016,Everton,3-0,Norwich City
+38,Sun May 15 2016,Chelsea,1-1,Leicester City
+38,Tue May 17 2016,Manchester United,3-1,Bournemouth
