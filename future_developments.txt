@@ -7,12 +7,21 @@
         *--> transfers > squad
         *--> transfers > tactics
         *--> training > tactics
-        --> matchday --> tactics
+        *--> matchday --> tactics
 -increase budget after matchday
 -test everything:
-        --> words
+        --> lowercase words
+        --> uppercase words
         --> numbers
         --> blank
-        --> desired answer
+        --> uppercase desired answer
+        --> lowercase desired answer
         --> non-desired answer
+*-update squad and tactics page to display injuries and suspensions
+-give more space for digits in league table
 -try to perfect lengths of '-----------'
+-add other leagues
+-display past results
+-support for more realistic match engine when ovr is <75
+-save game
+-let mentality change game results

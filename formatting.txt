@@ -1,14 +1,17 @@
+to edit after testing is finished:
+marked with '#FOR TESTING: [description]'
+
 player_database:
 ('16161', 'Wu Yuhang'): {'Index': '16161', 'Name': 'Wu Yuhang', 'OVR': '47', 'Position': 'CDM', 'Alternative positions': '', 'Age': '23', 'Nation': 'China PR', 'League': 'CSL', 'Team': 'Zhejiang Pro', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}
 
 epl_team_database:
-{'Manchester City': 79.4, 'Arsenal': 77.8, 'Liverpool': 75.4, 'Man Utd': 74.6, 'Spurs': 74.9, 'Aston Villa': 75.2, 'Newcastle Utd': 75.8, 'Chelsea': 76.4, 'Everton': 72.3, 'West Ham': 75.1, 'Fulham': 74.6, 'Crystal Palace': 73.1, 'Brighton': 73.2, 'Southampton': 71.6, 'AFC Bournemouth': 73.0, 'Brentford': 72.4, 'Wolves': 72.2, "Nott'm Forest": 74.4, 'Leicester City': 72.5, 'Ipswich': 72.2}
+{'Manchester City': [87.6, 181420000], 'Arsenal': [85.2, 96320000], 'Liverpool': [85.7, 126420000], 'Man Utd': [82.6, 208460000], 'Spurs': [82.9, 81280000], 'Aston Villa': [81.8, 52760000], 'Newcastle Utd': [82.7, 75480000], 'Chelsea': [81.5, 120250000]}
 
 formations_database:
 '3-1-4-2': ['GK', 'CB', 'CB', 'CB', 'LM', 'CM', 'CDM', 'CM', 'RM', 'ST', 'ST'], '3-4-1-2': ['GK', 'CB', 'CB', 'CB', 'LM', 'CM', 'CAM', 'CM', 'RM', 'ST', 'ST'],
 
 squad:
-('38', 'Bruno Fernandes'): {'Index': '38', 'Name': 'Bruno Fernandes', 'OVR': '87', 'Position': 'CAM', 'Alternative positions': 'CM', 'Age': '30', 'Nation': 'Portugal', 'League': 'Premier League', 'Team': 'Man Utd', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('102', 'Matthijs de Ligt'): {'Index': '102', 'Name': 'Matthijs de Ligt', 'OVR': '84', 'Position': 'CB', 'Alternative positions': '', 'Age': '25', 'Nation': 'Holland', 'League': 'Premier League', 'Team': 'Man Utd', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False},
+('38', 'Bruno Fernandes'): {'Index': '38', 'Name': 'Bruno Fernandes', 'OVR': '87', 'Position': 'CAM', 'Alternative positions': 'LW, CAM, RM', 'Age': '30', 'Nation': 'Portugal', 'League': 'Premier League', 'Team': 'Man Utd', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('102', 'Matthijs de Ligt'): {'Index': '102', 'Name': 'Matthijs de Ligt', 'OVR': '84', 'Position': 'CB', 'Alternative positions': '', 'Age': '25', 'Nation': 'Holland', 'League': 'Premier League', 'Team': 'Man Utd', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False},
 
 fixtures_database = {
     GW1:{G1:['Chelsea', 'Arsenal'],
@@ -21,7 +24,7 @@ league_table:
 {'Manchester City':{'W':10, 'D':2, 'L':11, 'F':60, 'A':12},}
 
 tactics:
-{(1, 'ST') : {'Index': '38', 'Name': 'Bruno Fernandes', 'OVR': '87', 'Position': 'CAM', 'Alternative positions': 'CM', 'Age': '30', 'Nation': 'Portugal', 'League': 'Premier League', 'Team': 'Man Utd', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('102', 'Matthijs de Ligt'): {'Index': '102', 'Name': 'Matthijs de Ligt', 'OVR': '84', 'Position': 'CB', 'Alternative positions': '', 'Age': '25', 'Nation': 'Holland', 'League': 'Premier League', 'Team': 'Man Utd', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False},}
+{(1, 'ST') : {'Index': '38', 'Name': 'Bruno Fernandes', 'OVR': '87', 'Position': 'CAM', 'Alternative positions': 'CM', 'Age': '30', 'Nation': 'Portugal', 'League': 'Premier League', 'Team': 'Man Utd', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': 7}, ('2', 'ST'): {'Index': '102', 'Name': 'Matthijs de Ligt', 'OVR': '84', 'Position': 'CB', 'Alternative positions': '', 'Age': '25', 'Nation': 'Holland', 'League': 'Premier League', 'Team': 'Man Utd', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False},}
 
 transfer_market and transfer_market_seasonal:
 ('38', 'Bruno Fernandes'): {'Index': '38', 'Name': 'Bruno Fernandes', 'OVR': '87', 'Position': 'CAM', 'Alternative positions': 'CM', 'Age': '30', 'Nation': 'Portugal', 'League': 'Premier League', 'Team': 'Man Utd', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('102', 'Matthijs de Ligt'): {'Index': '102', 'Name': 'Matthijs de Ligt', 'OVR': '84', 'Position': 'CB', 'Alternative positions': '', 'Age': '25', 'Nation': 'Holland', 'League': 'Premier League', 'Team': 'Man Utd', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False},
@@ -29,8 +32,54 @@ transfer_market and transfer_market_seasonal:
 market refresh:
 [1, 5, 9, 13, 17, 21, 25, 29, 33, 37]
 
-transfer_market_seasonal = {1:{},5:{},9:{},13:{},17:{},21:{},25:{},29:{},33:{},37:{}}
+transfer_market_seasonal:
+{1:{},5:{},9:{},13:{},17:{},21:{},25:{},29:{},33:{},37:{}}
 
-training_records = {1: False, 2: False, 3: True, 4: True}
+training_records:
+{1: False, 2: False, 3: True, 4: True}
 
+teams_budget_database:
 {'Man Utd': 208460000, 'Paris Saint-Germain': 202490000, 'Manchester City': 181420000, 'Real Madrid': 152050000}
+
+match_engine_weights:
+{1: ['27', '50', '63', '47', '19', '14', '5', '2', '1', '0', '0'], 2: ['32', '71', '59', '34', '19', '11', '2', '0', '0', '0', '0'], 3: ['37', '57', '70', '32', '23', '8', '1', '0', '0', '0', '0'],}
+
+epl_match_engine_weights:
+{'Manchester City': [27, 50, 63, 47, 19, 14, 5, 2, 1, 0, 0], 'Liverpool': [32, 71, 59, 34, 19, 11, 2, 0, 0, 0, 0], 'Arsenal': [37, 57, 70, 32, 23, 8, 1, 0, 0, 0, 0], 'Spurs': [48, 65, 51, 44, 14, 4, 1, 0, 0, 1, 0], 'Newcastle Utd': [41, 62, 61, 32, 22, 8, 1, 1, 0, 0, 0], 'Man Utd': [43, 65, 56, 35, 20, 7, 2, 0, 0, 0, 0], 'Aston Villa': [55, 69, 58, 28, 11, 4, 2, 0, 0, 1, 0], 'Chelsea': [70, 76, 43, 26, 10, 2, 1, 0, 0, 0, 0]}
+
+matchday_results (before team_name has played):
+{'G1': {'Manchester City': '', 'Chelsea': ''}, 'G2': {'Newcastle Utd': 1, 'Everton': 0}, 'G3': {'Liverpool': 1, 'Brighton': 1}, 'G4': {'Man Utd': 1, 'Crystal Palace': 1},}
+
+matchday_results (after team_name has played):
+{'G1': {'Manchester City': 5, 'Chelsea': 0}, 'G2': {'Newcastle Utd': 1, 'Everton': 0}, 'G3': {'Liverpool': 1, 'Brighton': 1}, 'G4': {'Man Utd': 1, 'Crystal Palace': 1},}
+#game_key == G1/G2/G3/...
+
+events (from matchday_page --> matchday_game --> stage_events):
+{'1': '', '2': '', '3': 'Goal for Manchester City by Rodri (Assist: Kyle Walker)', '4': '', '5': '', '6': '', '7': 'Goal for Manchester City by Kevin De Bruyne (Assist: İlkay Gündoğan)', '8': '', '9': '', '10': '', '11': '', '12': '', '13': '', '14': '', '15': '', '16': '', '17': '', '18': '', '19': 'Goal for Manchester City by Erling Haaland (Assist: Kevin De Bruyne)', '20': '', '21': '', '22': '', '23': '', '24': '', '25': '', '26': '', '27': '', '28': '', '29': '', '30': '', '31': '', '32': '', '33': '', '34': '', '35': '', '36': '', '37': '', '38': '', '39': '', '40': '', '41': '', '42': '', '43': '', '44': 'Yellow Card: Joško Gvardiol', '45': '', '45+1': '', '45+2': '', '45+3': '', '45+4': '', '45+5': '', '46': 'Goal for Everton by Orel Mangala (Assist: Beto)', '47': '', '48': '', '49': 'Goal for Manchester City by Erling Haaland (Assist: Rúben Dias)', '50': '', '51': '', '52': '', '53': '', '54': '', '55': '', '56': '', '57': '', '58': '', '59': '', '60': 'Yellow Card: Beto', '61': '', '62': '', '63': '', '64': '', '65': '', '66': '', '67': '', '68': '', '69': '', '70': '', '71': '', '72': '', '73': '', '74': '', '75': '', '76': '', '77': '', '78': '', '79': 'Yellow Card: James Tarkowski', '80': '', '81': '', '82': '', '83': 'Goal for Manchester City by Erling Haaland (Assist: Rúben Dias)', '84': '', '85': '', '86': '', '87': '', '88': 'Injury: Abdoulaye Doucouré', '89': 
+'', '90': 'Goal for Manchester City by Kyle Walker (Assist: Phil Foden)', '90+1': '', '90+2': ''}
+
+self_pitch_players and opponent_pitch_players (WITH KEY 'cards' !!) :
+{(1, 'ST'): {'Index': '38', 'Name': 'Bruno Fernandes', 'OVR': '87', 'Position': 'CAM', 'Alternative positions': 'CM', 'Age': '30', 'Nation': 'Portugal', 'League': 
+'Premier League', 'Team': 'Man Utd', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False, 'Cards': None}}
+['Cards'] == 'None' OR 'Yellow'
+
+card_events:
+{'80': ('Chelsea', 'Red Card'), '80': ('Manchester City', 'Yellow Card')}
+
+inj_events:
+{'80': ('Chelsea', 'Injury'), '80': ('Manchester City', 'Injury')}
+
+goal_events:
+{'80': ('Chelsea', 'Goal'), '80': ('Manchester City', 'Goal')}
+
+scoreline_dupe:
+{'Manchester City': 0, 'Chelsea': 0}
+
+goals_and_assisters:
+{'Shawn Lim':[1,2]} #1st value is goals, 2nd assists
+
+suspenders:
+{'Shawn Lim':3}
+
+injurers:
+{'Shawn Lim':3}

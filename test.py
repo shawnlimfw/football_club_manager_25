@@ -1,29 +1,4 @@
-import csv
-import re
-
-input_file = "teams_budget.csv"
-output_file = "filtered_teams_budget.csv"
-
-with open(input_file, "r", newline="", encoding="utf-8") as infile, \
-     open(output_file, "w", newline="", encoding="utf-8") as outfile:
-
-    reader = csv.reader(infile)
-    writer = csv.writer(outfile)
-
-    for row in reader:
-        rank, club, value = row
-
-        # 1. Skip rows containing "(W)"
-        if "(W)" in club:
-            continue
-
-        # 2. Remove currency symbols and commas
-        clean_value = re.sub(r"[£€$]", "", value)  # remove symbols and commas
-        clean_value = clean_value.replace(",", ".")
-        clean_value = clean_value.replace("M", "")  # remove M at the end
-
-        # 3. Convert to float
-        # clean_value = float(clean_value)
-
-        # Write cleaned row
-        writer.writerow([rank, club, clean_value])
+{('1'): {'Index': '2', 'Name': 'Rodri', 'OVR': '91', 'Position': 'CDM', 'Alternative positions': 'CM', 'Age': '28', 'Nation': 'Spain', 'League': 'Premier 
+League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('3', 'Erling Haaland'): {'Index': '3', 'Name': 'Erling Haaland', 'OVR': '91', 'Position': 'ST', 'Alternative positions': '', 'Age': '24', 'Nation': 'Norway', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('6', 'Kevin De Bruyne'): {'Index': '6', 'Name': 'Kevin De Bruyne', 'OVR': '90', 'Position': 'CM', 'Alternative positions': 'CAM', 'Age': '33', 'Nation': 'Belgium', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('16', 'Phil Foden'): {'Index': '16', 'Name': 'Phil Foden', 'OVR': '88', 'Position': 'RW', 'Alternative positions': 'LW, CAM, RM', 'Age': '24', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('19', 'Rúben Dias'): {'Index': '19', 'Name': 'Rúben Dias', 'OVR': '88', 'Position': 'CB', 'Alternative positions': '', 'Age': '27', 'Nation': 'Portugal', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('22', 'Ederson'): {'Index': '22', 'Name': 'Ederson', 'OVR': '88', 'Position': 'GK', 'Alternative positions': '', 'Age': '31', 'Nation': 'Brazil', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('23', 'Bernardo Silva'): {'Index': '23', 'Name': 'Bernardo 
+Silva', 'OVR': '88', 'Position': 'CM', 'Alternative positions': 'RW', 'Age': '30', 'Nation': 'Portugal', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('42', 'İlkay Gündoğan'): {'Index': '42', 'Name': 'İlkay Gündoğan', 'OVR': '87', 'Position': 'CM', 'Alternative positions': 'CDM', 'Age': '33', 'Nation': 'Germany', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('87', 'John Stones'): {'Index': '87', 'Name': 'John Stones', 'OVR': '85', 'Position': 'CB', 'Alternative positions': 'CDM, RB', 'Age': '30', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('94', 'Manuel Akanji'): {'Index': '94', 'Name': 'Manuel Akanji', 'OVR': '84', 'Position': 'CB', 'Alternative positions': '', 'Age': '29', 'Nation': 'Switzerland', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, ('95', 'Nathan Aké'): {'Index': '95', 'Name': 'Nathan Aké', 'OVR': '84', 'Position': 'CB', 'Alternative positions': 'LB', 'Age': '29', 'Nation': 'Holland', 'League': 'Premier 
+League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}}

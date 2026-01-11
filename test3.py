@@ -343,21 +343,19 @@ def game_setup():
         filter_transfer_market()
         set_transfer_market_seasonal()
 
-    def testing():
-        global tactics
-        tactics = {(1, 'GK'): {'Index': '22', 'Name': 'Ederson', 'OVR': '88', 'Position': 'GK', 'Alternative positions': '', 'Age': '31', 'Nation': 'Brazil', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (2, 'LB'): {'Index': '148', 'Name': 'Joško Gvardiol', 'OVR': '83', 'Position': 'LB', 'Alternative positions': 'CB', 'Age': '22', 'Nation': 'Croatia', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (3, 'CB'): {'Index': '19', 'Name': 'Rúben Dias', 'OVR': '88', 'Position': 'CB', 'Alternative positions': '', 'Age': '27', 'Nation': 'Portugal', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (4, 'CB'): {'Index': '87', 'Name': 'John Stones', 'OVR': '85', 'Position': 'CB', 'Alternative positions': 'CDM, RB', 'Age': '30', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (5, 'RB'): {'Index': '130', 'Name': 'Kyle Walker', 'OVR': '84', 'Position': 'RB', 'Alternative positions': '', 'Age': '34', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (6, 'CM'): {'Index': '42', 'Name': 'İlkay Gündoğan', 'OVR': '87', 'Position': 'CM', 'Alternative positions': 'CDM', 'Age': '33', 'Nation': 'Germany', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (7, 'CDM'): {'Index': '2', 'Name': 'Rodri', 'OVR': '91', 'Position': 'CDM', 'Alternative positions': 'CM', 'Age': '28', 'Nation': 'Spain', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (8, 'CM'): {'Index': '6', 'Name': 'Kevin De Bruyne', 'OVR': '90', 'Position': 'CM', 'Alternative positions': 'CAM', 'Age': '33', 'Nation': 'Belgium', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (9, 'LW'): {'Index': '110', 'Name': 'Jack Grealish', 'OVR': '84', 'Position': 'LW', 'Alternative positions': 'LM', 'Age': '29', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (10, 'ST'): {'Index': '3', 'Name': 'Erling Haaland', 'OVR': '91', 'Position': 'ST', 'Alternative positions': '', 'Age': '24', 'Nation': 'Norway', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (11, 'RW'): {'Index': '16', 'Name': 'Phil Foden', 'OVR': '88', 'Position': 'RW', 'Alternative positions': 'LW, CAM, RM', 'Age': '24', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}}
-        #TESTING: ^^^DELETE
-
     game_setup_firstpage()
     set_squad()
     update_league_ranking()
     set_default_tactics()
     set_transfer_market()
     set_money()
-    testing()
 
 
 def main_menu():
+    global tactics
+    tactics = {(1, 'GK'): {'Index': '2', 'Name': 'Rodri', 'OVR': '91', 'Position': 'CDM', 'Alternative positions': 'CM', 'Age': '28', 'Nation': 'Spain', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (2, 'LB'): {'Index': '3', 'Name': 'Erling Haaland', 'OVR': '91', 'Position': 'ST', 'Alternative positions': '', 'Age': '24', 'Nation': 'Norway', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (3, 'CB'): {'Index': '6', 'Name': 'Kevin De Bruyne', 'OVR': '90', 'Position': 'CM', 'Alternative positions': 'CAM', 'Age': '33', 'Nation': 'Belgium', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (4, 'CB'): {'Index': '16', 'Name': 'Phil Foden', 'OVR': '88', 'Position': 'RW', 'Alternative positions': 'LW, CAM, RM', 'Age': '24', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (5, 'RB'): {'Index': 
+'19', 'Name': 'Rúben Dias', 'OVR': '88', 'Position': 'CB', 'Alternative positions': '', 'Age': '27', 'Nation': 'Portugal', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (6, 'CM'): {'Index': '22', 'Name': 'Ederson', 'OVR': '88', 'Position': 'GK', 'Alternative positions': '', 'Age': '31', 'Nation': 'Brazil', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 
+'Suspended': False, 'Injured': False}, (7, 'CDM'): {'Index': '23', 'Name': 'Bernardo Silva', 'OVR': '88', 'Position': 'CM', 'Alternative positions': 'RW', 'Age': '30', 'Nation': 'Portugal', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (8, 'CM'): {'Index': '42', 'Name': 'İlkay Gündoğan', 'OVR': '87', 'Position': 'CM', 'Alternative positions': 'CDM', 'Age': '33', 'Nation': 'Germany', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (9, 'LW'): {'Index': '87', 'Name': 'John Stones', 'OVR': '85', 'Position': 'CB', 'Alternative positions': 'CDM, RB', 'Age': '30', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (10, 'ST'): {'Index': '94', 'Name': 'Manuel Akanji', 'OVR': '84', 'Position': 'CB', 'Alternative positions': '', 'Age': '29', 'Nation': 'Switzerland', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (11, 'RW'): {'Index': '95', 'Name': 'Nathan Aké', 'OVR': '84', 'Position': 'CB', 'Alternative positions': 'LB', 'Age': '29', 'Nation': 'Holland', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}}
     options = {
         '1':'Squad',
         '2':'Tactics',
@@ -391,10 +389,10 @@ def main_menu():
 
 def squad_page():
     print('SQUAD')
-    print(f"{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Played':9}{'Goals':8}{'Assists':10}{'Suspended?':13}{'Injured?':14}{'OVR':4}")
-    print('---------------------------------------------------------------------------------------------------------------------------------------------------------------')
+    print(f"{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Played':9}{'Goals':8}{'Assists':10}{'Suspended?':13}{'Injured?':11}{'OVR':4}")
+    print('--------------------------------------------------------------------------------------------------------------------------------------------')
     for key,value in squad.items():
-        print(f"{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Played']:<9}{value['Goals']:<8}{value['Assists']:<10}{f"Yes ({value['Suspended']} MD)" if value['Suspended'] != False else 'No':<13}{f"Yes ({value['Injured']} MD)" if value['Injured'] != False else 'No':<14}{value['OVR']:<4}")
+        print(f"{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Played']:<9}{value['Goals']:<8}{value['Assists']:<10}{'Yes' if value['Suspended'] else 'No':<13}{'Yes' if value['Injured'] else 'No':<11}{value['OVR']:<4}")
     print('')
     while True:
         if input('Press X to go back to MAIN MENU: ') == 'X':
@@ -431,13 +429,13 @@ def tactics_page():
                     break
 
     def print_tactics():
-        print(f"{'Lineup':<9}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Played':9}{'Goals':8}{'Assists':10}{'Suspended?':13}{'Injured?':14}{'OVR':4}")
-        print('---------------------------------------------------------------------------------------------------------------------------------------------------------------')
+        print(f"{'Lineup':<9}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Played':9}{'Goals':8}{'Assists':10}{'Suspended?':13}{'Injured?':11}{'OVR':4}")
+        print('---------------------------------------------------------------------------------------------------------------------------------------------------')
         for key,value in tactics.items():
             if value == '':
                 print(f"{key[1]:<9}")
             else:
-                print(f"{key[1]:<9}{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Played']:<9}{value['Goals']:<8}{value['Assists']:<10}{f"Yes ({value['Suspended']} MD)" if value['Suspended'] != False else 'No':<13}{f"Yes ({value['Injured']} MD)" if value['Injured'] != False else 'No':<14}{value['OVR']:<4}")     
+                print(f"{key[1]:<9}{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Played']:<9}{value['Goals']:<8}{value['Assists']:<10}{'Yes' if value['Suspended'] else 'No':<13}{'Yes' if value['Injured'] else 'No':<11}{value['OVR']:<4}")     
 
     def tactics_change_formation():
         global tactics_formation
@@ -505,15 +503,15 @@ def tactics_page():
     def tactics_change_tactics():
         while True:
             print('STARTING XI')
-            print('Press the number on the left to edit each position')
+            print('Press the letter on the left to edit each position')
             print('')
-            print(f"{'Press':<8}{'Lineup':<9}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Played':9}{'Goals':8}{'Assists':10}{'Suspended?':13}{'Injured?':14}{'OVR':4}")
+            print(f"{'Press':<8}{'Lineup':<9}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Played':9}{'Goals':8}{'Assists':10}{'Suspended?':13}{'Injured?':11}{'OVR':4}")
             print('-----------------------------------------------------------------------------------------------------------------------------------------------------------')
             for index, (key,value) in enumerate(tactics.items(), 1):
                 if value == '':
                     print(f"{index:<8}{key[1]:<9}")
                 else:
-                    print(f"{index:<8}{key[1]:<9}{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Played']:<9}{value['Goals']:<8}{value['Assists']:<10}{f"Yes ({value['Suspended']} MD)" if value['Suspended'] != False else 'No':<13}{f"Yes ({value['Injured']} MD)" if value['Injured'] != False else 'No':<14}{value['OVR']:<4}")
+                    print(f"{index:<8}{key[1]:<9}{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Played']:<9}{value['Goals']:<8}{value['Assists']:<10}{'Yes' if value['Suspended'] else 'No':<13}{'Yes' if value['Injured'] else 'No':<11}{value['OVR']:<4}")
             print('')
             while True:
                 exit = False
@@ -539,10 +537,10 @@ def tactics_page():
         print(f"CHOOSE {position[1]}:")
         print(f"Press the number on the left to choose the player")
         print('')
-        print(f"{'Press':<8}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Played':9}{'Goals':8}{'Assists':10}{'Suspended?':13}{'Injured?':14}{'OVR':4}")
+        print(f"{'Press':<8}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Played':9}{'Goals':8}{'Assists':10}{'Suspended?':13}{'Injured?':11}{'OVR':4}")
         print('-----------------------------------------------------------------------------------------------------------------------------------------------------------')
         for index, (key,value) in enumerate(squad.items(), 1):
-            print(f"{index:<8}{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Played']:<9}{value['Goals']:<8}{value['Assists']:<10}{f"Yes ({value['Suspended']} MD)" if value['Suspended'] != False else 'No':<13}{f"Yes ({value['Injured']} MD)" if value['Injured'] != False else 'No':<14}{value['OVR']:<4}")
+            print(f"{index:<8}{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Played']:<9}{value['Goals']:<8}{value['Assists']:<10}{'Yes' if value['Suspended'] else 'No':<13}{'Yes' if value['Injured'] else 'No':<11}{value['OVR']:<4}")
         print('')
         while True:
             command = input('Press X to go back to STARTING XI: ')
@@ -860,9 +858,9 @@ def training_page():
 
 def finances_page():
     print('FINANCES')
-    print(f"Income: ${income:,.0f}")
-    print(f"Expenditure: ${expenditure:,.0f}")
-    print(f"Net Income: {'-' if income - expenditure < 0 else ''}${abs(income - expenditure):,.0f}")
+    print(f"Income: ${income:.0f}")
+    print(f"Expenditure: ${expenditure:.0f}")
+    print(f"Net spend: ${income - expenditure:.0f}")
     print('')
     while True:
         command = input('Press X to go back to MAIN MENU: ')
@@ -874,7 +872,9 @@ def matchday_page():
     #use update_tactics() after each matchday
     #use update_league_ranking() after each matchday
     #increase budget after matchday
+
     def matchday_main_page():
+        
         while True:
             print(f"MATCHDAY {matchday}")
             print('')
@@ -907,9 +907,9 @@ def matchday_page():
             if value == '':
                 eligible = False
             else:
-                if value['Suspended'] != False:
+                if value['Suspended'] == True:
                     eligible = False
-                if value['Injured'] != False:
+                if value['Injured'] == True:
                     eligible = False
         if eligible == True:  #FOR TESTING: CHANGE TO TRUE
             matchday_game()
@@ -917,7 +917,7 @@ def matchday_page():
             print('Lineup is incomplete or players are unavailable.')
             print('Please edit lineup in TACTICS page.')
             while True:
-                command = input(f"Press X to go back to MATCHDAY {matchday}: ")
+                command = input('Press X to go back to MAIN MENU: ')
                 if command == 'X':
                     print('')
                     return
@@ -1153,39 +1153,39 @@ def matchday_page():
                         carded_player = random.choice(list(self_pitch_players))
                         carded_player_name = self_pitch_players[carded_player]['Name']
                         if card_type == 'Red Card':
-                            events[minute] = f"Red Card: {carded_player_name} ({team_name})"
+                            events[minute] = f"Red Card: {carded_player_name}"
                             del self_pitch_players[carded_player]
                         if card_type == 'Yellow Card':
                             if self_pitch_players[carded_player]['Cards'] == 'Yellow':
-                                events[minute] = f"Red Card (Second Yellow Card): {carded_player_name} ({team_name})"
+                                events[minute] = f"Red Card (Second Yellow Card): {carded_player_name}"
                                 del self_pitch_players[carded_player]
                             elif self_pitch_players[carded_player]['Cards'] == 'None':
-                                events[minute] = f"Yellow Card: {carded_player_name} ({team_name})"
+                                events[minute] = f"Yellow Card: {carded_player_name}"
                                 self_pitch_players[carded_player]['Cards'] = 'Yellow'
                     elif carded_team == opponent:
                         carded_player = random.choice(list(opponent_pitch_players))
                         carded_player_name = opponent_pitch_players[carded_player]['Name']
                         if card_type == 'Red Card':
-                            events[minute] = f"Red Card: {carded_player_name} ({opponent})"
+                            events[minute] = f"Red Card: {carded_player_name}"
                             del opponent_pitch_players[carded_player]
                         if card_type == 'Yellow Card':
                             if opponent_pitch_players[carded_player]['Cards'] == 'Yellow':
-                                events[minute] = f"Red Card (Second Yellow Card): {carded_player_name} ({opponent})"
+                                events[minute] = f"Red Card (Second Yellow Card): {carded_player_name}"
                                 del opponent_pitch_players[carded_player]
                             elif opponent_pitch_players[carded_player]['Cards'] == 'None':
-                                events[minute] = f"Yellow Card: {carded_player_name} ({opponent})"
+                                events[minute] = f"Yellow Card: {carded_player_name}"
                                 opponent_pitch_players[carded_player]['Cards'] = 'Yellow'
                 if minute in inj_events:
                     injured_team = inj_events[minute][0]
                     if injured_team == team_name:
                         injured_player = random.choice(list(self_pitch_players))
                         injured_player_name = self_pitch_players[injured_player]['Name']
-                        events[minute] = f"Injury: {injured_player_name} ({team_name})"
+                        events[minute] = f"Injury: {injured_player_name}"
                         del self_pitch_players[injured_player]
                     if injured_team == opponent:
                         injured_player = random.choice(list(opponent_pitch_players))
                         injured_player_name = opponent_pitch_players[injured_player]['Name']
-                        events[minute] = f"Injury: {injured_player_name} ({opponent})"
+                        events[minute] = f"Injury: {injured_player_name}"
                         del opponent_pitch_players[injured_player]
                 if minute in goal_events:
                     #setup position_classes (used in setting up goal_weights and assist_weights)
@@ -1263,7 +1263,7 @@ def matchday_page():
                             goal_weights[key] = ovr_bonus * pos_fit_bonus * goal_pitch_pos_bonus
 
                         #choose goalscorer, update temp_dict
-                        goal_scorer = random.choices(list(temp_dict), weights = list(goal_weights.values()), k=1)[0]
+                        goal_scorer = random.choices(list(temp_dict), weights = list(goal_weights), k=1)
                         del temp_dict[goal_scorer]
 
                         #setup assist_weights
@@ -1283,11 +1283,11 @@ def matchday_page():
                             assist_weights[key] = ovr_bonus * pos_fit_bonus * assist_pitch_pos_bonus
 
                         #choose assister, update temp_dict
-                        assister = random.choices(list(temp_dict), weights = list(assist_weights.values()), k=1)[0]
+                        assister = random.choices(list(temp_dict), weights = list(assist_weights), k=1)
                         del temp_dict[assister]
 
                         #update events
-                        events[minute] = f"Goal for {team_name} by {self_pitch_players[goal_scorer]['Name']} (Assist: {self_pitch_players[assister]['Name']})"
+                        events[minute] = f"Goal for {team_name} by {self_pitch_players[goal_scorer]} (Assist: {self_pitch_players[assister]})"
                                         
                     if goal_events[minute][0] == opponent:
                         #setup temp_dict
@@ -1314,7 +1314,7 @@ def matchday_page():
                             #end
                             goal_pitch_pos_bonus = goal_pitch_pos_bonus_algo[key[1]]
                             goal_weights[key] = ovr_bonus * pos_fit_bonus * goal_pitch_pos_bonus
-
+                        
                         #choose goalscorer, update temp_dict
                         goal_scorer = random.choices(list(temp_dict), weights = list(goal_weights.values()), k=1)[0]
                         del temp_dict[goal_scorer]
@@ -1345,229 +1345,12 @@ def matchday_page():
                         events[minute] = f"Goal for {opponent} by {opponent_pitch_players[goal_scorer]['Name']} (Assist: {opponent_pitch_players[assister]['Name']})"
 
         def game_output():
-            scoreline_dupe = {}
-            for key, value in matchday_results[game_key].items():
-                scoreline_dupe[key] = 0
-            reference = iter(scoreline_dupe)
-            print(f"{next(reference)} VS {next(reference)}")
-            
-
             for key, value in events.items():
-                if value == '':
-                    print(key + "' ", end='', flush=True)
-                    for dot in '.....':
-                        print(dot, end='', flush=True)
-                        time.sleep(0.001) #TESTING: CHANGE TO 0.3
-                    print('')
-                elif value != '':
-                    if value[:4] == 'Goal':
-                        print(key + "' " + value)
-                        if value[9:].startswith(team_name):
-                            scoreline_dupe[team_name] += 1
-                        else:
-                            scoreline_dupe[opponent] += 1
-                        print('')
-                        for key, value in scoreline_dupe.items():
-                            print(f"{key}: {value}")
-                        print('')
-                        for i in range(5):
-                            time.sleep(0.001) #TESTING: CHANGE TO 0.3
-                    else:
-                        print(key + "' " + value)
-                        for i in range(5):
-                            time.sleep(0.001) #TESTING: CHANGE TO 0.3
-            print('')
-            print(f"FT")
-            reference = matchday_results[game_key]
-            teamone = list(reference)[0]
-            teamtwo = list(reference)[1]
-            print(f"{teamone}  {reference[teamone]}-{reference[teamtwo]}  {teamtwo}")
-            print('')
-
-            while True:
-                command = input('Press X to continue: ')
-                if command == 'X':
-                    print('')
-                    break
+                print(key)
+                print(value)
 
         def update_stats():
-            global matchday
-            global league_table
-            global squad
-            global tactics
-            global money
-            global income
-
-            #update matchday counter for suspensions and injuries
-            for key, value in squad.items():
-                if value['Suspended'] != False:
-                    if value['Suspended'] == 1:
-                        squad[key]['Suspended'] = False
-                    elif value['Suspended'] != 1:
-                        squad[key]['Suspended'] -= 1
-                if value['Injured'] != False:
-                    if value['Injured'] == 1:
-                        squad[key]['Injured'] = False
-                    elif value['Injured'] != 1:
-                        squad[key]['Injured'] -= 1
-            update_tactics()
-
-            #update league table
-            for key, scoreline in matchday_results.items():
-
-                teamone = list(scoreline)[0]
-                teamtwo = list(scoreline)[1]
-
-                league_table[teamone]['F'] += matchday_results[key][teamone]
-                league_table[teamone]['A'] += matchday_results[key][teamtwo]
-                league_table[teamtwo]['F'] += matchday_results[key][teamtwo]
-                league_table[teamtwo]['A'] += matchday_results[key][teamone]
-                if matchday_results[key][teamone] == matchday_results[key][teamtwo]:
-                    league_table[teamone]['D'] += 1
-                    league_table[teamtwo]['D'] += 1
-                elif matchday_results[key][teamone] > matchday_results[key][teamtwo]:
-                    league_table[teamone]['W'] += 1
-                    league_table[teamtwo]['L'] += 1
-                elif matchday_results[key][teamone] < matchday_results[key][teamtwo]:
-                    league_table[teamone]['L'] += 1
-                    league_table[teamtwo]['W'] += 1
-
-            #update played
-            for key, value in tactics.items():
-                for keyy, valuee in squad.items():
-                    if keyy[1] == value['Name']:
-                        squad[keyy]['Played'] += 1
-            update_tactics()
-
-            #update injuries, suspensions, goals, assists
-            goals_and_assisters = {} #for game overview page later
-            suspenders = {} #for game overview page later
-            injurers = {} #for game overview page later
-            for key, event in events.items():
-                if f"({team_name})" in event or f"Goal for {team_name}" in event: #to prevent incidents where players have similiar names to teams eg. Everton
-                    if event[:4] == 'Goal':
-
-                        indexx1 = len(team_name) + 13
-                        indexx2 = event.find(f" (Assist: ")
-                        for key, value in squad.items():
-                            if key[1] == event[indexx1:indexx2]:
-                                squad[key]['Goals'] += 1
-                                if key[1] not in goals_and_assisters:
-                                    goals_and_assisters[key[1]] = [0,0]
-                                    goals_and_assisters[key[1]][0] += 1
-                                else:
-                                    goals_and_assisters[key[1]][0] += 1
-
-                        indexx3 = event.find(f" (Assist: ") + 10
-                        indexx4 = len(event) - 1
-                        for key, value in squad.items():
-                            if key[1] == event[indexx3:indexx4]:
-                                squad[key]['Assists'] += 1
-                                if key[1] not in goals_and_assisters:
-                                    goals_and_assisters[key[1]] = [0,0]
-                                    goals_and_assisters[key[1]][1] += 1
-                                else:
-                                    goals_and_assisters[key[1]][1] += 1
-                        
-                        update_tactics()
-
-                    if event[:11] == 'Yellow Card':
-                        pass
-                    
-                    if event[:9] == 'Red Card:':
-                        indexx1 = 10
-                        indexx2 = event.find(f" ({team_name})")
-                        player = event[indexx1:indexx2]
-                        for key, value in squad.items():
-                            if key[1] == player:
-                                squad[key]['Suspended'] = 3
-                                suspenders[key[1]] = 3
-                        update_tactics()
-                        
-                    if event[:30] == 'Red Card (Second Yellow Card):':
-                        indexx1 = 31
-                        indexx2 = event.find(f" ({team_name})")
-                        player = event[indexx1:indexx2]
-                        for key, value in squad.items():
-                            if key[1] == player:
-                                squad[key]['Suspended'] = 1
-                                suspenders[key[1]] = 1
-                        update_tactics()
-                        
-                    if event[:6] == 'Injury':
-                        indexx = event.find(f"({team_name}") - 1
-                        for key, value in squad.items():
-                            if key[1] == event[8:indexx]:
-                                number = random.randint(1,10)
-                                squad[key]['Injured'] = number
-                                injurers[key[1]] = number
-                        update_tactics()
-
-            #update match earnings
-            for key, value in matchday_results.items():
-                if team_name in value:
-                    if team_name == next(iter(value)):
-                        earnings = round((8 / 171) * teams_budget_database[team_name])
-                    else:
-                        earnings = round((1 / 171) * teams_budget_database[team_name])
-            money += earnings
-            income += earnings
-
-            #update league ranking on main menu
-            update_league_ranking()
-
-            #give summary of game, inclu updated stats
-            print('GAME OVERVIEW')
-            print('')
-            
-            if goals_and_assisters != {}:
-                for key, value in goals_and_assisters.items():
-                    if value[0] != 0 and value[1] == 0:
-                        text = f"({value[0]}G)"
-                    elif value[0] == 0 and value[1] != 0:
-                        text = f"({value[1]}A)"
-                    else:
-                        text = f"({value[0]}G, {value[1]}A)"
-                    print(f"{key} {text}")
-                print('')
-                
-            if suspenders != {}:
-                print('SUSPENSIONS')
-                for key, value in suspenders.items():
-                    print(f"{key} (Out for {value} matchday{'s' if value > 1 else ''})")
-                print('')
-
-            if injurers != {}:
-                print('INJURIES')
-                for key, value in injurers.items():
-                    print(f"{key} (Out for {value} matchday{'s' if value > 1 else ''})")
-                print('')
-                
-            print(f"Matchday Income: ${earnings:,}")
-            print('')
-            while True:
-                command = input('Press X to continue: ')
-                if command == 'X':
-                    print('')
-                    break
-
-            #update matchday no.
-            matchday += 1
-                
-        def print_matchday_results():
-            print(f"MATCHDAY {matchday-1} RESULTS")
-            print('')
-            for key, match in matchday_results.items():
-                teamone = list(match)[0]
-                teamtwo = list(match)[1]
-                print(f"{teamone:>30}  {match[teamone]}-{match[teamtwo]}  {teamtwo:<30}")
-            print('')
-
-            while True:
-                command = input('Press X to continue: ')
-                if command == 'X':
-                    print('')
-                    break
+            input('?') #TESTING
 
         simulate_other_games()
         calculate_self_rating()
@@ -1576,7 +1359,6 @@ def matchday_page():
         stage_events()
         game_output()
         update_stats()
-        print_matchday_results()
 
     matchday_main_page()
 
