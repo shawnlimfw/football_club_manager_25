@@ -256,7 +256,7 @@ def game_setup():
             try:
                 print('')
                 print(f"{'Press:':8}{'Team':25}{'Rating':9}{'Starting Budget'}")
-                print('-----------------------------------------------------------------')
+                print('-----------------------------------------------------------')
                 placeholder = [key for key in epl_team_database]
                 placeholder.sort()
                 for index, key in enumerate(placeholder, 1):
@@ -378,7 +378,7 @@ def main_menu():
     while True:
         try:
             print(f"{'Press:':8}{'Command:':25}")
-            print('------------------------------------')
+            print('----------------------------')
             for key,value in options.items():
                 print(f"{key:<8}{value}")
             print('')
@@ -392,7 +392,7 @@ def main_menu():
 def squad_page():
     print('SQUAD')
     print(f"{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Played':9}{'Goals':8}{'Assists':10}{'Suspended?':13}{'Injured?':14}{'OVR':4}")
-    print('---------------------------------------------------------------------------------------------------------------------------------------------------------------')
+    print('----------------------------------------------------------------------------------------------------------------------------------------------')
     for key,value in squad.items():
         print(f"{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Played']:<9}{value['Goals']:<8}{value['Assists']:<10}{f"Yes ({value['Suspended']} MD)" if value['Suspended'] != False else 'No':<13}{f"Yes ({value['Injured']} MD)" if value['Injured'] != False else 'No':<14}{value['OVR']:<4}")
     print('')
@@ -432,7 +432,7 @@ def tactics_page():
 
     def print_tactics():
         print(f"{'Lineup':<9}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Played':9}{'Goals':8}{'Assists':10}{'Suspended?':13}{'Injured?':14}{'OVR':4}")
-        print('---------------------------------------------------------------------------------------------------------------------------------------------------------------')
+        print('-------------------------------------------------------------------------------------------------------------------------------------------------------')
         for key,value in tactics.items():
             if value == '':
                 print(f"{key[1]:<9}")
@@ -508,7 +508,7 @@ def tactics_page():
             print('Press the number on the left to edit each position')
             print('')
             print(f"{'Press':<8}{'Lineup':<9}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Played':9}{'Goals':8}{'Assists':10}{'Suspended?':13}{'Injured?':14}{'OVR':4}")
-            print('-----------------------------------------------------------------------------------------------------------------------------------------------------------')
+            print('---------------------------------------------------------------------------------------------------------------------------------------------------------------')
             for index, (key,value) in enumerate(tactics.items(), 1):
                 if value == '':
                     print(f"{index:<8}{key[1]:<9}")
@@ -540,7 +540,7 @@ def tactics_page():
         print(f"Press the number on the left to choose the player")
         print('')
         print(f"{'Press':<8}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Played':9}{'Goals':8}{'Assists':10}{'Suspended?':13}{'Injured?':14}{'OVR':4}")
-        print('-----------------------------------------------------------------------------------------------------------------------------------------------------------')
+        print('------------------------------------------------------------------------------------------------------------------------------------------------------')
         for index, (key,value) in enumerate(squad.items(), 1):
             print(f"{index:<8}{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Played']:<9}{value['Goals']:<8}{value['Assists']:<10}{f"Yes ({value['Suspended']} MD)" if value['Suspended'] != False else 'No':<13}{f"Yes ({value['Injured']} MD)" if value['Injured'] != False else 'No':<14}{value['OVR']:<4}")
         print('')
@@ -571,10 +571,10 @@ def league_page():
         print('English Premier League')
         print(f"Matchday {matchday}/38")
         print('')
-        print(f"{'POS':<5}{'Team':<30}{'Pl':<3}{'W':<3}{'D':<3}{'L':<3}{'F':<3}{'A':<3}{'GD':<3}{'Pts':<3}")
-        print('-------------------------------------------------------------')
+        print(f"{'POS':<5}{'Team':<30}{'Pl':<5}{'W':<5}{'D':<5}{'L':<5}{'F':<5}{'A':<5}{'GD':<5}{'Pts':<5}")
+        print('--------------------------------------------------------------------------')
         for index, (key, value) in enumerate(league_table.items(), 1):
-            print(f"{index:<5}{key:<30}{value['W']+value['D']+value['L']:<3}{value['W']:<3}{value['D']:<3}{value['L']:<3}{value['F']:<3}{value['A']:<3}{value['F']-value['A']:<3}{value['W']*3+value['D']:<3}")
+            print(f"{index:<5}{key:<30}{value['W']+value['D']+value['L']:<5}{value['W']:<5}{value['D']:<5}{value['L']:<5}{value['F']:<5}{value['A']:<5}{value['F']-value['A']:<5}{value['W']*3+value['D']:<5}")
             if key == team_name:
                 update_league_ranking(index)
         print('')
@@ -625,7 +625,7 @@ def fixtures_page():
     def show_team_fixtures():
         print(f"{team_name}")  
         print(f"Press X to view Matchday {matchday} fixtures")
-        print('--------------------------------------------------------------------')
+        print('--------------------------------------')
         for gwid, gwdict in fixtures_database.items():
             for gid, glist in gwdict.items():
                 if team_name == glist[0]:
@@ -646,7 +646,7 @@ def transfers_page():
     def decide_transfer_market_seasonal():
         m = matchday
         while True:
-            if m - 1 % 4 == 0:
+            if (m - 1) % 4 == 0:
                 return m
             else:
                 m -= 1
@@ -744,7 +744,7 @@ def transfers_page():
             print('Press the number on the left to sell player')
             print('')
             print(f"{'Press':<8}{'Name':<28}{'Position':11}{'Alt Positions':16}{'Nation':22}{'Age':6}{'Team':<28}{'OVR':4}{'Value':10}")
-            print('-----------------------------------------------------------------------------------------------------------------------------------------------------------')
+            print('-----------------------------------------------------------------------------------------------------------------------------------------')
             for index, (key,value) in enumerate(squad.items(), 1):
                 print(f"{index:<8}{value['Name']:<28}{value['Position']:<11}{value['Alternative positions']:<16}{value['Nation']:<22}{value['Age']:<6}{value['Team']:<28}{value['OVR']:<4}${int(value_calibrated(int(value['OVR']), int(value['Age']))):,}")
                 placeholder[index] = key
@@ -1125,16 +1125,16 @@ def matchday_page():
             for minute in temp_events:
                 team = random.choice([team_name, opponent])
                 p = random.random()
-                if p < 0.00150:
+                if p < 0.00075: #TESTING: CHANGED FROM 0.00150 TO 0.00075
                     card_events[minute] = (team, 'Red Card')
                     temp_events.remove(minute)
-                elif p < 0.048:
+                elif p < 0.024: #TESTING: CHANGED FROM 0.048 TO 0.024
                     card_events[minute] = (team, 'Yellow Card')
                     temp_events.remove(minute)
             for minute in temp_events:
                 team = random.choice([team_name, opponent])
                 p = random.random()
-                if p < 0.01:
+                if p < 0.003: #TESTING: CHANGED FROM 0.01 TO 0.003 (MINIMISE INJURIES)
                     inj_events[minute] = (team, 'Injury')
                     temp_events.remove(minute)
             for minute in random.sample(temp_events, k=matchday_results[game_key][team_name]):

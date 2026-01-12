@@ -2,13 +2,19 @@
 -*show finances in transfers
 -*increase youngsters chance of improving in training
 -*add starting budgets
--use flowchart to determine necessary updates
+-*use flowchart to determine necessary updates
         *--> training > squad
         *--> transfers > squad
         *--> transfers > tactics
         *--> training > tactics
         *--> matchday --> tactics
--increase budget after matchday
+-*increase budget after matchday
+
+-*update squad and tactics page to display injuries and suspensions
+-*give more space for digits in league table
+-*fix trf market bug about market refresh
+-*change odds of cards and injuries
+-*try to perfect lengths of '-----------'
 -test everything:
         --> lowercase words
         --> uppercase words
@@ -17,9 +23,6 @@
         --> uppercase desired answer
         --> lowercase desired answer
         --> non-desired answer
-*-update squad and tactics page to display injuries and suspensions
--give more space for digits in league table
--try to perfect lengths of '-----------'
 -add other leagues
 -display past results
 -support for more realistic match engine when ovr is <75
