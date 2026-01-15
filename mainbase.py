@@ -470,8 +470,11 @@ def tactics_page():
         print('')
         while True:
             new_c = input('Choose a formation (or press X to return to TACTICS): ')
-            if int(new_c) in indexes or new_c == 'X':
-                break
+            try:
+                if int(new_c) in indexes or new_c == 'X':
+                    break
+            except:
+                pass
         print('')
         if new_c == 'X':
             return
@@ -524,10 +527,13 @@ def tactics_page():
                     break
                 if command == '':
                     continue
-                if int(command) in list(range(1, 12)):
-                    print('')
-                    tactics_change_position(int(command))
-                    break
+                try:
+                    if int(command) in list(range(1, 12)):
+                        print('')
+                        tactics_change_position(int(command))
+                        break
+                except:
+                    pass
             if exit == True:
                 return
 
