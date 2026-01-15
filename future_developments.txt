@@ -9,12 +9,12 @@
         *--> training > tactics
         *--> matchday --> tactics
 -*increase budget after matchday
-
 -*update squad and tactics page to display injuries and suspensions
 -*give more space for digits in league table
 -*fix trf market bug about market refresh
 -*change odds of cards and injuries
 -*try to perfect lengths of '-----------'
+-season end page
 -test everything:
         --> lowercase words
         --> uppercase words

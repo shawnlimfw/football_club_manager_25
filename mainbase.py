@@ -1580,6 +1580,73 @@ def matchday_page():
 
     matchday_main_page()
 
+def season_end_page():
+
+    def end_league_table():
+        print('English Premier League')
+        print(f"Matchday 38/38")
+        print('')
+        print(f"{'POS':<5}{'Team':<30}{'Pl':<5}{'W':<5}{'D':<5}{'L':<5}{'F':<5}{'A':<5}{'GD':<5}{'Pts':<5}")
+        print('--------------------------------------------------------------------------')
+        for index, (key, value) in enumerate(league_table.items(), 1):
+            print(f"{index:<5}{key:<30}{value['W']+value['D']+value['L']:<5}{value['W']:<5}{value['D']:<5}{value['L']:<5}{value['F']:<5}{value['A']:<5}{value['F']-value['A']:<5}{value['W']*3+value['D']:<5}")
+        print('')
+        while True:
+            command = input('Press X to return to SEASON SUMMARY: ')
+            if command == 'X':
+                print('')
+                return
+            
+    while True:        
+        print('END OF SEASON')
+        print('')
+        print('Press X TO VIEW LEAGUE TABLE')
+        print(f"Final League Position: {league_ranking}")
+        print(f"Games Played: 38")
+        print(f"Games Won: {league_table[team_name]['W']}")
+        print(f"Games Drawn: {league_table[team_name]['D']}")
+        print(f"Games Lost: {league_table[team_name]['L']}")
+        print(f"Goals Scored: {league_table[team_name]['F']}")
+        print(f"Goals Conceeded: {league_table[team_name]['A']}")
+        print('')
+        print(f"Income: ${income:,}")
+        print(f"Expenditure: ${expenditure:,}")
+        print(f"Net Income: ${income - expenditure:,}")
+        print('')
+
+        goals_sorted_squad_list_wogoals = [k for k, v in sorted(squad.items(), key = lambda item: item[1]['Goals'], reverse= True)]
+        goals_sorted_squad_list_wgoals = [(k[1], squad[k]['Goals']) for k in goals_sorted_squad_list_wogoals]
+        text = 'Top Scorers: '
+        for player in goals_sorted_squad_list_wgoals[:3]:
+            text += f"{player[0]} ({player[1]}), "
+        text = text[:-2]
+        print(text)
+
+        assists_sorted_squad_list_woassists = [k for k, v in sorted(squad.items(), key = lambda item: item[1]['Assists'], reverse= True)]
+        assists_sorted_squad_list_wassists = [(k[1], squad[k]['Assists']) for k in assists_sorted_squad_list_woassists]
+        text = 'Top Assisters: '
+        for player in assists_sorted_squad_list_wassists[:3]:
+            text += f"{player[0]} ({player[1]}), "
+        text = text[:-2]
+        print(text)
+        print('')
+
+        print('Thanks for playing!')
+        exit = False
+        while True:
+            command = input('Press Y to end game: ')
+            if command == 'X':
+                print('')
+                end_league_table()
+                break
+            elif command == 'Y':
+                exit = True
+                break
+        
+        if exit == True:
+            break
+
+
 #main code starts here
 initilisation()
 game_setup()
@@ -1601,3 +1668,6 @@ while True:
         training_page()
     if command == 8:
         matchday_page()
+        if matchday == 39:
+            season_end_page()
+            break
