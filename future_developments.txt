@@ -14,7 +14,8 @@
 -*fix trf market bug about market refresh
 -*change odds of cards and injuries
 -*try to perfect lengths of '-----------'
--season end page
+-*season end page
+-*go back to main menu after matchday
 -test everything:
         --> lowercase words
         --> uppercase words

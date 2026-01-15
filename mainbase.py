@@ -899,7 +899,7 @@ def matchday_page():
                 if command == 'Y':
                     print('')
                     matchday_check_eligibility_page()
-                    break
+                    return
 
     def matchday_check_eligibility_page():
         eligible = True
@@ -917,7 +917,7 @@ def matchday_page():
             print('Lineup is incomplete or players are unavailable.')
             print('Please edit lineup in TACTICS page.')
             while True:
-                command = input(f"Press X to go back to MATCHDAY {matchday}: ")
+                command = input(f"Press X to go back to MAIN MENU: ")
                 if command == 'X':
                     print('')
                     return
@@ -1125,16 +1125,16 @@ def matchday_page():
             for minute in temp_events:
                 team = random.choice([team_name, opponent])
                 p = random.random()
-                if p < 0.00075: #TESTING: CHANGED FROM 0.00150 TO 0.00075
+                if p < 0: #TESTING: CHANGED FROM 0.00150 TO 0.00075
                     card_events[minute] = (team, 'Red Card')
                     temp_events.remove(minute)
-                elif p < 0.024: #TESTING: CHANGED FROM 0.048 TO 0.024
+                elif p < 0: #TESTING: CHANGED FROM 0.048 TO 0.024
                     card_events[minute] = (team, 'Yellow Card')
                     temp_events.remove(minute)
             for minute in temp_events:
                 team = random.choice([team_name, opponent])
                 p = random.random()
-                if p < 0.003: #TESTING: CHANGED FROM 0.01 TO 0.003 (MINIMISE INJURIES)
+                if p < 0: #TESTING: CHANGED FROM 0.01 TO 0.003 (MINIMISE INJURIES)
                     inj_events[minute] = (team, 'Injury')
                     temp_events.remove(minute)
             for minute in random.sample(temp_events, k=matchday_results[game_key][team_name]):
