@@ -83,3 +83,11 @@ suspenders:
 
 injurers:
 {'Shawn Lim':3}
+
+to change odds of
+red card: dj83974dhduie891
+yellow card: hde23iuy3786573f
+injurers: ytd7674t76duh0jd
+time taken to load match events: duiuu28dg3u64tr6
+time taken to load training: ed19yhuyg67t2g56
+(ctrl + F and then search the code)

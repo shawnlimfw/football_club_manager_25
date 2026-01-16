@@ -1,3 +1,7 @@
+# advanced version of mainbase.py where
+# - starting XI is preset
+# - training and match times are fastened
+
 import csv
 import random
 import time
@@ -343,9 +347,9 @@ def game_setup():
         filter_transfer_market()
         set_transfer_market_seasonal()
 
-    # def testing():
-    #     global tactics
-    #     tactics = {(1, 'GK'): {'Index': '22', 'Name': 'Ederson', 'OVR': '88', 'Position': 'GK', 'Alternative positions': '', 'Age': '31', 'Nation': 'Brazil', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (2, 'LB'): {'Index': '148', 'Name': 'Joško Gvardiol', 'OVR': '83', 'Position': 'LB', 'Alternative positions': 'CB', 'Age': '22', 'Nation': 'Croatia', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (3, 'CB'): {'Index': '19', 'Name': 'Rúben Dias', 'OVR': '88', 'Position': 'CB', 'Alternative positions': '', 'Age': '27', 'Nation': 'Portugal', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (4, 'CB'): {'Index': '87', 'Name': 'John Stones', 'OVR': '85', 'Position': 'CB', 'Alternative positions': 'CDM, RB', 'Age': '30', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (5, 'RB'): {'Index': '130', 'Name': 'Kyle Walker', 'OVR': '84', 'Position': 'RB', 'Alternative positions': '', 'Age': '34', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (6, 'CM'): {'Index': '42', 'Name': 'İlkay Gündoğan', 'OVR': '87', 'Position': 'CM', 'Alternative positions': 'CDM', 'Age': '33', 'Nation': 'Germany', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (7, 'CDM'): {'Index': '2', 'Name': 'Rodri', 'OVR': '91', 'Position': 'CDM', 'Alternative positions': 'CM', 'Age': '28', 'Nation': 'Spain', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (8, 'CM'): {'Index': '6', 'Name': 'Kevin De Bruyne', 'OVR': '90', 'Position': 'CM', 'Alternative positions': 'CAM', 'Age': '33', 'Nation': 'Belgium', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (9, 'LW'): {'Index': '110', 'Name': 'Jack Grealish', 'OVR': '84', 'Position': 'LW', 'Alternative positions': 'LM', 'Age': '29', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (10, 'ST'): {'Index': '3', 'Name': 'Erling Haaland', 'OVR': '91', 'Position': 'ST', 'Alternative positions': '', 'Age': '24', 'Nation': 'Norway', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (11, 'RW'): {'Index': '16', 'Name': 'Phil Foden', 'OVR': '88', 'Position': 'RW', 'Alternative positions': 'LW, CAM, RM', 'Age': '24', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}}
+    def testing():
+        global tactics
+        tactics = {(1, 'GK'): {'Index': '22', 'Name': 'Ederson', 'OVR': '88', 'Position': 'GK', 'Alternative positions': '', 'Age': '31', 'Nation': 'Brazil', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (2, 'LB'): {'Index': '148', 'Name': 'Joško Gvardiol', 'OVR': '83', 'Position': 'LB', 'Alternative positions': 'CB', 'Age': '22', 'Nation': 'Croatia', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (3, 'CB'): {'Index': '19', 'Name': 'Rúben Dias', 'OVR': '88', 'Position': 'CB', 'Alternative positions': '', 'Age': '27', 'Nation': 'Portugal', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (4, 'CB'): {'Index': '87', 'Name': 'John Stones', 'OVR': '85', 'Position': 'CB', 'Alternative positions': 'CDM, RB', 'Age': '30', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (5, 'RB'): {'Index': '130', 'Name': 'Kyle Walker', 'OVR': '84', 'Position': 'RB', 'Alternative positions': '', 'Age': '34', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (6, 'CM'): {'Index': '42', 'Name': 'İlkay Gündoğan', 'OVR': '87', 'Position': 'CM', 'Alternative positions': 'CDM', 'Age': '33', 'Nation': 'Germany', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (7, 'CDM'): {'Index': '2', 'Name': 'Rodri', 'OVR': '91', 'Position': 'CDM', 'Alternative positions': 'CM', 'Age': '28', 'Nation': 'Spain', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (8, 'CM'): {'Index': '6', 'Name': 'Kevin De Bruyne', 'OVR': '90', 'Position': 'CM', 'Alternative positions': 'CAM', 'Age': '33', 'Nation': 'Belgium', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (9, 'LW'): {'Index': '110', 'Name': 'Jack Grealish', 'OVR': '84', 'Position': 'LW', 'Alternative positions': 'LM', 'Age': '29', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (10, 'ST'): {'Index': '3', 'Name': 'Erling Haaland', 'OVR': '91', 'Position': 'ST', 'Alternative positions': '', 'Age': '24', 'Nation': 'Norway', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}, (11, 'RW'): {'Index': '16', 'Name': 'Phil Foden', 'OVR': '88', 'Position': 'RW', 'Alternative positions': 'LW, CAM, RM', 'Age': '24', 'Nation': 'England', 'League': 'Premier League', 'Team': 'Manchester City', 'Played': 0, 'Goals': 0, 'Assists': 0, 'Suspended': False, 'Injured': False}}
     # TESTING: ^^^DELETE
 
     game_setup_firstpage()
@@ -832,7 +836,7 @@ def training_page():
             print(load, end="", flush=True)
             for dot in '........':
                 print(dot, end="", flush=True)
-                time.sleep(0.3) # control training time (code: ed19yhuyg67t2g56)
+                time.sleep(0.000001) # control training time (normal = 0.3) (code: ed19yhuyg67t2g56)
             print('')
         print('')
 
@@ -1363,7 +1367,7 @@ def matchday_page():
                     print(key + "' ", end='', flush=True)
                     for dot in '.....':
                         print(dot, end='', flush=True)
-                        time.sleep(0.3) #TESTING: CHANGE TO 0.3 (code: duiuu28dg3u64tr6)
+                        time.sleep(0.000001) #TESTING: CHANGE TO 0.3 (code: duiuu28dg3u64tr6)
                     print('')
                 elif value != '':
                     if value[:4] == 'Goal':
@@ -1377,11 +1381,11 @@ def matchday_page():
                             print(f"{key}: {value}")
                         print('')
                         for i in range(5):
-                            time.sleep(0.3) #TESTING: CHANGE TO 0.3
+                            time.sleep(0.000001) #TESTING: CHANGE TO 0.3
                     else:
                         print(key + "' " + value)
                         for i in range(5):
-                            time.sleep(0.3) #TESTING: CHANGE TO 0.3
+                            time.sleep(0.000001) #TESTING: CHANGE TO 0.3
             print('')
             print(f"FT")
             reference = matchday_results[game_key]
