@@ -73,11 +73,6 @@ global_check.py           Helper script that checks for undeclared global variab
 future_developments.txt   Planned improvements
 ```
 
-## Data
-
-- **Player ratings:** EA Sports FC 25 player ratings. All rights belong to their owners, and this project is for educational purposes only.
-- **Match results:** real Premier League results, 2015/16 to 2020/21. Source: [add source].
-- **Team ratings:** FIFA 16 to FIFA 22 team ratings. Source: [add source].
 
 ## Limitations and future work
 
